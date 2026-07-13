@@ -1,0 +1,34 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# Cursor
+.cursor/
+
+# Flutter
+.dart_tool/
+build/
+
+# Logs
+*.log
+
+# Temporary
+tmp/
+temp/
+
+# Environment
+.env
+
+# IDE
+.idea/
+
+# Generated documentation
+*.bak

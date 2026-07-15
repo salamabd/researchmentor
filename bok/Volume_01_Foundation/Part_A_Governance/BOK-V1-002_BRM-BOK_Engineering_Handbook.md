@@ -579,3 +579,351 @@ Chapter 2 is complete when it:
 | Version   | Date               | Description            |
 | --------- | ------------------ | ---------------------- |
 | 1.0 Draft | Foundation Phase 2 | Chapter 2 established. |
+
+
+
+# Chapter 3 — Knowledge Engineering
+
+---
+
+## 3.1 Purpose
+
+This chapter defines the knowledge engineering discipline used throughout BRM-BOK.
+
+Knowledge engineering is the systematic process of identifying, organising, governing, validating, evolving, and relating educational knowledge so that it remains coherent, reusable, explainable, and evidence-informed.
+
+Knowledge engineering provides the foundation upon which frameworks, theories, methodologies, architectures, specifications, and implementations are constructed.
+
+---
+
+## 3.2 Definition
+
+Within BRM-BOK:
+
+**Knowledge Engineering** is the disciplined process of creating and maintaining governed educational knowledge through structured modelling, traceability, validation, and continuous improvement.
+
+Knowledge engineering treats educational knowledge as a long-lived institutional asset rather than project documentation.
+
+---
+
+## 3.3 Objectives
+
+Knowledge engineering within BRM-BOK pursues the following objectives:
+
+* preserve conceptual integrity;
+* reduce duplication;
+* support educational consistency;
+* improve discoverability;
+* enable reuse;
+* facilitate governance;
+* support empirical validation;
+* ensure long-term maintainability.
+
+---
+
+## 3.4 Knowledge Domains
+
+BRM-BOK organises knowledge into distinct but connected domains.
+
+| Domain         | Purpose                           |
+| -------------- | --------------------------------- |
+| Governance     | Governing principles and policies |
+| Framework      | Educational foundations           |
+| Theory         | Explanatory models                |
+| Methodology    | Educational practice              |
+| Architecture   | Structural design                 |
+| Specification  | Behavioural requirements          |
+| Implementation | Operational systems               |
+| Validation     | Educational evidence              |
+| Evolution      | Continuous improvement            |
+
+Each domain has clearly defined responsibilities.
+
+---
+
+## 3.5 Knowledge Artifact Types
+
+Every governed artifact shall belong to one primary category.
+
+Examples include:
+
+* Charter
+* Standard
+* Framework
+* Theory
+* Methodology
+* Architecture
+* Model
+* Specification
+* Register
+* Guideline
+* Validation Report
+* Decision Record
+* Case Study
+
+Each artifact type shall have defined governance expectations.
+
+---
+
+## 3.6 Knowledge Lifecycle
+
+Knowledge progresses through the following lifecycle:
+
+Idea
+
+↓
+
+Proposal
+
+↓
+
+Working Draft
+
+↓
+
+Review
+
+↓
+
+Accepted Draft
+
+↓
+
+Canonical
+
+↓
+
+Validated
+
+↓
+
+Revised
+
+↓
+
+Retired
+
+No artifact shall become canonical without governance review.
+
+---
+
+## 3.7 Concept Lifecycle
+
+Individual concepts follow a similar progression.
+
+Each concept shall identify:
+
+* educational problem;
+* definition;
+* rationale;
+* dependencies;
+* relationships;
+* evidence status;
+* validation strategy.
+
+Concepts mature through evidence rather than assertion.
+
+---
+
+## 3.8 Evidence Classification
+
+Every significant concept shall identify its current evidence level.
+
+| Classification | Meaning                                                     |
+| -------------- | ----------------------------------------------------------- |
+| Established    | Supported by substantial literature or established practice |
+| Adapted        | Derived from existing work with justified modification      |
+| Proposed       | Original BRM concept awaiting validation                    |
+| Validated      | Supported by empirical evaluation within BRM                |
+| Deprecated     | Retained for historical reference but no longer recommended |
+
+Evidence classifications may evolve over time.
+
+---
+
+## 3.9 Knowledge Relationships
+
+Knowledge within BRM-BOK is interconnected.
+
+Typical relationships include:
+
+* derives from;
+* supports;
+* depends on;
+* constrains;
+* extends;
+* refines;
+* validates;
+* supersedes;
+* complements.
+
+These relationships should be explicit wherever practical.
+
+---
+
+## 3.10 Canonical Registers
+
+BRM-BOK maintains authoritative registers.
+
+Examples include:
+
+* Document Register
+* Theory Register
+* Methodology Register
+* Architecture Register
+* Identifier Register
+* Terminology Register
+* Review Register
+
+Registers provide authoritative references for governance.
+
+---
+
+## 3.11 Canonical Terminology
+
+Canonical terminology shall be centrally governed.
+
+Each canonical term shall include:
+
+* identifier;
+* preferred name;
+* definition;
+* rationale;
+* related concepts;
+* usage guidance;
+* version history.
+
+Competing terminology shall be resolved through governance review.
+
+---
+
+## 3.12 Knowledge Traceability
+
+Every artifact shall identify:
+
+* parent artifacts;
+* dependent artifacts;
+* related theories;
+* related methodologies;
+* related architectures;
+* validation evidence.
+
+Knowledge traceability enables transparent reasoning throughout BRM-BOK.
+
+---
+
+## 3.13 Knowledge Quality
+
+Knowledge quality shall be evaluated against the following attributes:
+
+* accuracy;
+* clarity;
+* consistency;
+* completeness;
+* educational relevance;
+* traceability;
+* maintainability;
+* explainability;
+* governance compliance.
+
+These attributes define the minimum quality baseline for canonical knowledge.
+
+---
+
+## 3.14 AI-Assisted Knowledge Engineering
+
+Artificial intelligence may assist with:
+
+* drafting;
+* comparison;
+* consistency checking;
+* traceability analysis;
+* terminology review;
+* structural modelling;
+* editorial refinement.
+
+Artificial intelligence shall not independently establish canonical educational knowledge.
+
+Human review remains mandatory.
+
+---
+
+## 3.15 Knowledge Preservation
+
+Canonical knowledge shall be preserved through:
+
+* version control;
+* revision history;
+* governance records;
+* persistent identifiers;
+* repository management;
+* institutional documentation.
+
+Historical versions shall remain traceable.
+
+---
+
+## 3.16 Knowledge Evolution
+
+Knowledge evolves through controlled refinement.
+
+Evolution should be driven by:
+
+* educational evidence;
+* scholarly literature;
+* expert review;
+* institutional experience;
+* implementation feedback;
+* empirical validation.
+
+Evolution shall preserve conceptual continuity whenever possible.
+
+---
+
+## 3.17 Engineering Decision Rules
+
+Before accepting new knowledge, reviewers shall determine:
+
+1. What educational problem does this knowledge address?
+2. Is similar knowledge already available?
+3. How does it relate to existing concepts?
+4. What evidence supports it?
+5. How will it be validated?
+6. What artifacts will depend upon it?
+7. Does it strengthen the coherence of BRM-BOK?
+
+Only knowledge satisfying these questions should enter the canonical Body of Knowledge.
+
+---
+
+## 3.18 Normative Statements
+
+Within BRM-BOK:
+
+* Canonical knowledge **MUST** follow the defined lifecycle.
+* Significant concepts **MUST** identify an evidence classification.
+* Canonical terminology **MUST** be governed through the Lexicon.
+* Knowledge relationships **SHOULD** be explicitly documented.
+* AI-assisted contributions **MUST** undergo human review before canonisation.
+* Historical knowledge **MUST NOT** be deleted without governance approval.
+
+---
+
+## 3.19 Acceptance Criteria
+
+Chapter 3 is complete when it:
+
+* defines knowledge engineering within BRM-BOK;
+* establishes knowledge and concept lifecycles;
+* introduces evidence classifications;
+* defines canonical artifact categories;
+* establishes governance for terminology and registers;
+* provides a foundation for future knowledge modelling.
+
+---
+
+## Revision History
+
+| Version   | Date               | Description            |
+| --------- | ------------------ | ---------------------- |
+| 1.0 Draft | Foundation Phase 2 | Chapter 3 established. |

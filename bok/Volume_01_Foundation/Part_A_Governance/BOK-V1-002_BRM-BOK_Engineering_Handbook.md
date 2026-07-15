@@ -2334,3 +2334,292 @@ Chapter 7 is complete when it:
 | Version   | Date               | Description            |
 | --------- | ------------------ | ---------------------- |
 | 1.0 Draft | Foundation Phase 2 | Chapter 7 established. |
+
+# Chapter 8 — Human–AI Collaborative Engineering
+
+---
+
+## 8.1 Purpose
+
+This chapter establishes the principles governing collaboration between human contributors and artificial intelligence throughout the engineering lifecycle of the Business Research Mentoring Body of Knowledge (BRM-BOK).
+
+Artificial intelligence is recognised as a governed engineering collaborator whose role is to augment human capability while preserving human responsibility, educational judgement, and academic integrity.
+
+The objective is to maximise the strengths of both human expertise and AI-assisted reasoning while maintaining transparent governance.
+
+---
+
+## 8.2 Scope
+
+This chapter applies to all AI-assisted activities within BRM-BOK, including:
+
+* knowledge engineering;
+* governance support;
+* educational modelling;
+* theory development;
+* methodology design;
+* architectural analysis;
+* specification development;
+* implementation planning;
+* validation support;
+* editorial assistance.
+
+---
+
+## 8.3 Human–AI Collaboration Philosophy
+
+BRM-BOK adopts a partnership model of collaboration.
+
+Human contributors provide:
+
+* educational expertise;
+* scholarly judgement;
+* ethical responsibility;
+* governance authority;
+* contextual understanding.
+
+Artificial intelligence contributes:
+
+* analytical capability;
+* structured reasoning;
+* consistency checking;
+* alternative perspectives;
+* rapid synthesis;
+* documentation support.
+
+Neither participant replaces the other.
+
+Educational quality emerges through disciplined collaboration.
+
+---
+
+## 8.4 Collaboration Principles
+
+Human–AI collaboration is governed by the following principles:
+
+1. Human responsibility remains paramount.
+2. AI augments rather than replaces expertise.
+3. Educational purpose governs AI use.
+4. Collaboration shall remain transparent.
+5. Human review is mandatory before canonisation.
+6. AI outputs are subject to the same quality standards as human contributions.
+
+---
+
+## 8.5 Roles and Responsibilities
+
+### Human Contributors
+
+Human contributors are responsible for:
+
+* defining educational intent;
+* making scholarly judgements;
+* approving canonical knowledge;
+* resolving ambiguity;
+* ensuring academic integrity.
+
+### Artificial Intelligence
+
+Artificial intelligence may assist by:
+
+* generating alternatives;
+* identifying inconsistencies;
+* improving clarity;
+* analysing relationships;
+* suggesting literature themes;
+* checking traceability;
+* supporting quality reviews;
+* accelerating documentation.
+
+AI does not possess governance authority.
+
+---
+
+## 8.6 Collaboration Lifecycle
+
+Human–AI collaboration follows a structured lifecycle:
+
+Educational Need
+
+↓
+
+Human Framing
+
+↓
+
+AI Exploration
+
+↓
+
+Human Evaluation
+
+↓
+
+AI Refinement
+
+↓
+
+Human Approval
+
+↓
+
+Governance Review
+
+↓
+
+Canonical Integration
+
+This lifecycle preserves human accountability while benefiting from AI-assisted exploration.
+
+---
+
+## 8.7 Appropriate AI Contributions
+
+Appropriate uses of AI include:
+
+* brainstorming;
+* document drafting;
+* terminology consistency;
+* structural analysis;
+* traceability mapping;
+* dependency analysis;
+* editorial improvement;
+* scenario exploration;
+* quality reporting.
+
+These activities support but do not determine educational outcomes.
+
+---
+
+## 8.8 Restricted AI Activities
+
+Artificial intelligence shall not independently:
+
+* approve canonical documents;
+* establish educational principles;
+* define constitutional policies;
+* determine governance outcomes;
+* validate educational effectiveness;
+* replace expert academic judgement.
+
+These responsibilities remain exclusively human.
+
+---
+
+## 8.9 Transparency
+
+AI-assisted contributions should be identifiable within the engineering process.
+
+Transparency supports:
+
+* trust;
+* accountability;
+* reproducibility;
+* scholarly integrity.
+
+The objective is not to distinguish human writing from AI writing, but to ensure that governance remains informed about the role AI played during development.
+
+---
+
+## 8.10 Human Review
+
+Every AI-assisted artifact intended for canonical status shall undergo human review.
+
+Review should evaluate:
+
+* educational relevance;
+* conceptual correctness;
+* governance compliance;
+* traceability;
+* evidence;
+* consistency with BRM-BOK.
+
+Human approval remains mandatory before canonical acceptance.
+
+---
+
+## 8.11 AI Quality Expectations
+
+AI-assisted work shall satisfy the same quality expectations as any other contribution.
+
+AI assistance does not reduce expectations concerning:
+
+* educational quality;
+* conceptual coherence;
+* governance compliance;
+* traceability;
+* editorial quality;
+* evidence.
+
+---
+
+## 8.12 Responsible AI Use
+
+Responsible AI use within BRM-BOK requires:
+
+* respect for academic integrity;
+* preservation of human agency;
+* explainable recommendations;
+* awareness of uncertainty;
+* responsible treatment of evidence;
+* avoidance of unsupported assertions.
+
+Responsible use is measured by educational value rather than technological sophistication.
+
+---
+
+## 8.13 AI Capability Evolution
+
+Artificial intelligence technologies will continue to evolve.
+
+BRM-BOK therefore governs AI through enduring principles rather than platform-specific capabilities.
+
+Future AI systems may differ substantially from current systems, yet the governance model established in this chapter shall remain applicable.
+
+---
+
+## 8.14 Collaboration Metrics
+
+The collaboration process may be evaluated using indicators such as:
+
+* human review completion;
+* AI-assisted productivity;
+* governance compliance;
+* quality outcomes;
+* traceability completeness;
+* contributor satisfaction;
+* educational impact.
+
+Metrics support learning rather than surveillance.
+
+---
+
+## 8.15 Normative Statements
+
+Within BRM-BOK:
+
+* Human contributors **MUST** retain responsibility for canonical knowledge.
+* AI **MUST NOT** approve governance decisions.
+* AI-assisted artifacts **MUST** undergo human review before canonical release.
+* AI recommendations **SHOULD** remain explainable wherever practical.
+* Human–AI collaboration **SHOULD** enhance educational quality without diminishing scholarly responsibility.
+
+---
+
+## 8.16 Acceptance Criteria
+
+Chapter 8 is complete when it:
+
+* establishes the Human–AI collaboration model;
+* defines roles and responsibilities;
+* specifies appropriate and restricted AI activities;
+* establishes transparency and review expectations;
+* aligns AI use with the educational philosophy of BRM-BOK.
+
+---
+
+## Revision History
+
+| Version   | Date               | Description            |
+| --------- | ------------------ | ---------------------- |
+| 1.0 Draft | Foundation Phase 2 | Chapter 8 established. |

@@ -2623,3 +2623,287 @@ Chapter 8 is complete when it:
 | Version   | Date               | Description            |
 | --------- | ------------------ | ---------------------- |
 | 1.0 Draft | Foundation Phase 2 | Chapter 8 established. |
+
+# Chapter 9 — Configuration, Release, and Version Management
+
+---
+
+## 9.1 Purpose
+
+This chapter establishes the configuration management, release management, and version management framework governing the Business Research Mentoring Body of Knowledge (BRM-BOK).
+
+Configuration management ensures that every controlled artifact within BRM-BOK is uniquely identified, versioned, traceable, governed, and released in a consistent manner.
+
+The objective is to preserve the integrity, reproducibility, and long-term stability of the Body of Knowledge while supporting disciplined evolution.
+
+---
+
+## 9.2 Scope
+
+This chapter applies to all controlled Configuration Items (CIs) within BRM-BOK, including:
+
+* canonical documents;
+* standards;
+* frameworks;
+* theories;
+* methodologies;
+* architectures;
+* specifications;
+* registers;
+* software components;
+* datasets;
+* validation assets.
+
+---
+
+## 9.3 Configuration Philosophy
+
+BRM-BOK treats the Body of Knowledge as an integrated engineering system.
+
+Accordingly:
+
+* every controlled artifact shall be uniquely identifiable;
+* every released baseline shall be reproducible;
+* every revision shall remain traceable;
+* every dependency shall be managed;
+* every release shall be governed.
+
+Configuration management supports confidence in both the current state and the historical evolution of BRM-BOK.
+
+---
+
+## 9.4 Configuration Items
+
+A Configuration Item (CI) is any governed artifact whose identity, version, and lifecycle are managed under configuration control.
+
+Examples include:
+
+* Charter;
+* Standards;
+* Frameworks;
+* Theories;
+* Methodologies;
+* Architectures;
+* Specifications;
+* Registers;
+* Software modules;
+* Validation reports.
+
+Each Configuration Item shall possess:
+
+* a unique identifier;
+* a defined owner;
+* a lifecycle status;
+* a version;
+* traceability relationships;
+* revision history.
+
+---
+
+## 9.5 Baselines
+
+A baseline is an approved collection of Configuration Items representing a stable and reviewable state of BRM-BOK.
+
+Examples include:
+
+* Foundation Release 1.0;
+* Volume I Release 1.0;
+* Engineering Handbook Version 1.0.
+
+Baselines shall not change without formal governance approval.
+
+---
+
+## 9.6 Release Management
+
+A release is the authorised publication of one or more approved Configuration Items.
+
+Each release shall identify:
+
+* release identifier;
+* release date;
+* included Configuration Items;
+* version numbers;
+* significant changes;
+* superseded artifacts;
+* approval authority.
+
+Release documentation provides a permanent historical record.
+
+---
+
+## 9.7 Version Management
+
+Version identifiers communicate the maturity and evolution of Configuration Items.
+
+The following conventions apply.
+
+### Major Version
+
+Indicates substantial conceptual or structural change.
+
+Example:
+
+2.0
+
+---
+
+### Minor Version
+
+Indicates compatible enhancement or refinement.
+
+Example:
+
+1.1
+
+---
+
+### Editorial Revision
+
+Indicates corrections that do not alter conceptual meaning.
+
+Example:
+
+1.0.1
+
+Version identifiers shall remain consistent throughout BRM-BOK.
+
+---
+
+## 9.8 Configuration Registers
+
+The following registers support configuration management:
+
+* Configuration Item Register;
+* Release Register;
+* Version Register;
+* Identifier Register;
+* Dependency Register;
+* Baseline Register.
+
+Registers provide the authoritative inventory of controlled artifacts.
+
+---
+
+## 9.9 Dependency Management
+
+Configuration Items may depend upon other Configuration Items.
+
+Dependencies shall be explicitly identified and reviewed before approving significant changes.
+
+Dependency analysis should consider:
+
+* conceptual impacts;
+* governance impacts;
+* implementation impacts;
+* validation impacts.
+
+---
+
+## 9.10 Repository Integrity
+
+The repository shall remain the authoritative source for controlled Configuration Items.
+
+Accordingly:
+
+* canonical artifacts shall be stored under version control;
+* identifiers shall remain unique;
+* repository structure shall remain governed;
+* superseded artifacts shall remain traceable.
+
+Repository integrity supports long-term maintainability.
+
+---
+
+## 9.11 Release Readiness
+
+Before release, reviewers shall verify:
+
+* governance approval;
+* quality gate completion;
+* traceability completeness;
+* version consistency;
+* dependency analysis;
+* documentation completeness.
+
+Only artifacts satisfying release criteria shall enter a baseline.
+
+---
+
+## 9.12 Migration Guidance
+
+Where significant revisions affect existing Configuration Items, migration guidance should identify:
+
+* affected artifacts;
+* compatibility implications;
+* required updates;
+* superseded relationships;
+* recommended transition path.
+
+Migration guidance supports orderly evolution.
+
+---
+
+## 9.13 Configuration Audits
+
+Periodic configuration audits should verify:
+
+* repository consistency;
+* identifier uniqueness;
+* version integrity;
+* register completeness;
+* dependency correctness;
+* baseline consistency.
+
+Configuration audits provide assurance that BRM-BOK remains internally coherent.
+
+---
+
+## 9.14 Release Metrics
+
+Configuration management may monitor:
+
+* released baselines;
+* active Configuration Items;
+* superseded artifacts;
+* configuration defects;
+* unresolved dependencies;
+* release frequency;
+* baseline stability.
+
+Metrics support governance planning and continuous improvement.
+
+---
+
+## 9.15 Normative Statements
+
+Within BRM-BOK:
+
+* Every Configuration Item **MUST** possess a unique identifier.
+* Every canonical release **MUST** define an approved baseline.
+* Repository versions **MUST** remain traceable.
+* Configuration audits **SHOULD** be performed periodically.
+* Superseded Configuration Items **MUST NOT** be deleted from the historical record.
+* Migration guidance **SHOULD** accompany major conceptual revisions.
+
+---
+
+## 9.16 Acceptance Criteria
+
+Chapter 9 is complete when it:
+
+* establishes configuration management principles;
+* defines Configuration Items;
+* establishes baselines;
+* defines release and version management;
+* introduces dependency management;
+* defines repository integrity requirements;
+* establishes configuration audit expectations.
+
+---
+
+## Revision History
+
+| Version   | Date               | Description            |
+| --------- | ------------------ | ---------------------- |
+| 1.0 Draft | Foundation Phase 2 | Chapter 9 established. |

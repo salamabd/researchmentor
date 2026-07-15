@@ -2042,3 +2042,295 @@ Chapter 6 is complete when it:
 | Version   | Date               | Description            |
 | --------- | ------------------ | ---------------------- |
 | 1.0 Draft | Foundation Phase 2 | Chapter 6 established. |
+
+
+# Chapter 7 — Quality Management and Assurance
+
+---
+
+## 7.1 Purpose
+
+This chapter establishes the quality management and quality assurance framework for the Business Research Mentoring Body of Knowledge (BRM-BOK).
+
+Quality within BRM-BOK extends beyond software quality. It encompasses the quality of educational knowledge, governance, theories, methodologies, architectures, specifications, implementations, validation evidence, and documentation.
+
+The objective is to ensure that every canonical artifact contributes to a coherent, trustworthy, evidence-informed Body of Knowledge.
+
+---
+
+## 7.2 Scope
+
+This chapter applies to:
+
+* canonical documents;
+* educational theories;
+* mentoring methodologies;
+* reference architectures;
+* specifications;
+* governance processes;
+* decision records;
+* software implementations;
+* validation activities;
+* supporting registers.
+
+Quality management shall be applied throughout the engineering lifecycle.
+
+---
+
+## 7.3 Quality Philosophy
+
+Quality is achieved through disciplined engineering rather than inspection alone.
+
+Accordingly:
+
+* quality shall be designed into artifacts;
+* governance shall reinforce quality;
+* traceability shall support quality;
+* validation shall demonstrate quality;
+* continuous improvement shall sustain quality.
+
+Quality is a responsibility shared by all contributors.
+
+---
+
+## 7.4 Quality Objectives
+
+BRM-BOK pursues the following quality objectives:
+
+1. Educational integrity.
+2. Conceptual coherence.
+3. Internal consistency.
+4. Traceability.
+5. Explainability.
+6. Maintainability.
+7. Reusability.
+8. Scholarly credibility.
+9. Institutional readiness.
+10. Continuous improvement.
+
+---
+
+## 7.5 Quality Dimensions
+
+Every canonical artifact should be evaluated across multiple dimensions.
+
+| Dimension       | Description                                |
+| --------------- | ------------------------------------------ |
+| Educational     | Advances researcher development.           |
+| Governance      | Conforms to governance requirements.       |
+| Conceptual      | Consistent with BRM-BOK concepts.          |
+| Structural      | Correct organisation and metadata.         |
+| Traceability    | Complete relationships to other artifacts. |
+| Editorial       | Conforms to the Writing Standard.          |
+| Evidence        | Supported by appropriate evidence.         |
+| Technical       | Feasible to implement where applicable.    |
+| Maintainability | Sustainable over time.                     |
+
+No single dimension is sufficient in isolation.
+
+---
+
+## 7.6 Quality Gates
+
+Canonical artifacts shall pass defined quality gates before progressing through the engineering lifecycle.
+
+Minimum quality gates include:
+
+### Gate 1 — Completeness
+
+The artifact addresses its stated purpose and required sections.
+
+### Gate 2 — Editorial Compliance
+
+The artifact conforms to the BRM-BOK Writing Standard.
+
+### Gate 3 — Governance Compliance
+
+The artifact satisfies governance requirements and identifies required decision records.
+
+### Gate 4 — Traceability
+
+The artifact establishes required traceability relationships.
+
+### Gate 5 — Educational Review
+
+Educational rationale is coherent, relevant, and aligned with BRM-BOK.
+
+### Gate 6 — Canonical Readiness
+
+The artifact is suitable for acceptance into BRM-BOK.
+
+---
+
+## 7.7 Quality Reviews
+
+Quality reviews should examine:
+
+* clarity;
+* consistency;
+* educational value;
+* duplication;
+* terminology;
+* evidence;
+* governance;
+* traceability;
+* implementation implications.
+
+Reviews should identify opportunities for improvement rather than merely defects.
+
+---
+
+## 7.8 Quality Defects
+
+Quality defects should be classified according to severity.
+
+### Critical
+
+Compromises educational integrity, governance, or canonical correctness.
+
+### Major
+
+Substantially reduces educational quality or conceptual consistency.
+
+### Minor
+
+Limited impact on usability or clarity.
+
+### Editorial
+
+Formatting, grammar, or presentation issues.
+
+Defects should be corrected before canonical release where practical.
+
+---
+
+## 7.9 Quality Metrics
+
+Quality management should monitor:
+
+* review completion rates;
+* editorial compliance;
+* traceability completeness;
+* unresolved defects;
+* duplicate concepts;
+* terminology consistency;
+* evidence coverage;
+* canonical readiness.
+
+Metrics support informed governance rather than replacing expert judgement.
+
+---
+
+## 7.10 Quality Registers
+
+Quality-related information should be recorded in:
+
+* Review Register;
+* Defect Register;
+* Terminology Register;
+* Traceability Register;
+* Validation Register.
+
+Registers provide transparency and support continuous improvement.
+
+---
+
+## 7.11 Quality Responsibilities
+
+Quality responsibilities are shared.
+
+### Contributors
+
+Produce artifacts consistent with BRM-BOK standards.
+
+### Reviewers
+
+Evaluate quality objectively and provide constructive feedback.
+
+### Governance Authority
+
+Approve artifacts for canonical status when quality expectations have been satisfied.
+
+### AI Systems
+
+Assist with consistency checking, traceability analysis, terminology review, and editorial support.
+
+AI does not approve canonical quality.
+
+---
+
+## 7.12 Readiness for Canonical Release
+
+An artifact is ready for canonical release when:
+
+* its educational purpose is clear;
+* governance requirements are satisfied;
+* traceability is complete;
+* quality gates have been passed;
+* significant defects have been resolved;
+* required approvals have been obtained.
+
+Canonical release is a governance decision, not merely the completion of writing.
+
+---
+
+## 7.13 Continuous Quality Improvement
+
+Quality management shall support continuous improvement through:
+
+* periodic reviews;
+* lessons learned;
+* governance feedback;
+* implementation experience;
+* institutional evaluation;
+* scholarly research.
+
+Continuous improvement shall preserve conceptual stability while enabling justified refinement.
+
+---
+
+## 7.14 AI-Assisted Quality Management
+
+Artificial intelligence may assist in:
+
+* editorial review;
+* terminology consistency;
+* duplicate detection;
+* traceability verification;
+* structural analysis;
+* quality reporting.
+
+AI-generated quality assessments shall remain subject to human judgement.
+
+---
+
+## 7.15 Normative Statements
+
+Within BRM-BOK:
+
+* Canonical artifacts **MUST** satisfy applicable quality gates.
+* Quality reviews **MUST** consider educational, governance, editorial, and traceability dimensions.
+* Critical defects **MUST** be resolved before canonical release.
+* AI **MUST NOT** determine canonical quality independently.
+* Continuous quality improvement **SHOULD** be embedded within normal governance activities.
+
+---
+
+## 7.16 Acceptance Criteria
+
+Chapter 7 is complete when it:
+
+* establishes the BRM-BOK quality management framework;
+* defines quality dimensions;
+* introduces quality gates;
+* establishes review and defect management principles;
+* defines readiness for canonical release;
+* integrates quality with governance and traceability.
+
+---
+
+## Revision History
+
+| Version   | Date               | Description            |
+| --------- | ------------------ | ---------------------- |
+| 1.0 Draft | Foundation Phase 2 | Chapter 7 established. |

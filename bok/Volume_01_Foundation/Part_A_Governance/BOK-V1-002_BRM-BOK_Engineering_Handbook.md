@@ -1645,3 +1645,400 @@ Chapter 5 is complete when it:
 | Version   | Date               | Description            |
 | --------- | ------------------ | ---------------------- |
 | 1.0 Draft | Foundation Phase 2 | Chapter 5 established. |
+
+
+# Chapter 6 — Traceability Framework
+
+---
+
+## 6.1 Purpose
+
+This chapter establishes the traceability framework used throughout the Business Research Mentoring Body of Knowledge (BRM-BOK).
+
+Traceability is the capability to identify, explain, and verify the relationships among educational purpose, governance, theories, methodologies, architectures, specifications, implementations, and validation evidence.
+
+The objective is to ensure that every significant engineering decision can be understood within its complete educational context.
+
+---
+
+## 6.2 Scope
+
+The traceability framework applies to every canonical artifact within BRM-BOK, including:
+
+* governance documents;
+* standards;
+* frameworks;
+* theories;
+* methodologies;
+* architectures;
+* models;
+* specifications;
+* software components;
+* validation artifacts;
+* decision records.
+
+Working notes and temporary artifacts are excluded unless explicitly referenced by a canonical artifact.
+
+---
+
+## 6.3 Traceability Principles
+
+The framework is governed by the following principles.
+
+1. Every canonical artifact shall have a traceable purpose.
+2. Every engineering decision shall identify its educational rationale.
+3. Every implementation shall trace to governed knowledge.
+4. Every educational claim shall trace to supporting evidence.
+5. Traceability shall be preserved throughout the engineering lifecycle.
+
+---
+
+## 6.4 Traceability Levels
+
+BRM-BOK recognises five complementary levels of traceability.
+
+### Governance Traceability
+
+Connects:
+
+Charter
+
+↓
+
+Framework
+
+↓
+
+Principles
+
+↓
+
+Decision Records
+
+This demonstrates why a concept exists.
+
+---
+
+### Educational Traceability
+
+Connects:
+
+Educational Objectives
+
+↓
+
+Capabilities
+
+↓
+
+Mentoring Activities
+
+↓
+
+Learning Outcomes
+
+This demonstrates how educational value is achieved.
+
+---
+
+### Architectural Traceability
+
+Connects:
+
+Theory
+
+↓
+
+Methodology
+
+↓
+
+Architecture
+
+↓
+
+Specification
+
+This demonstrates how educational ideas become system designs.
+
+---
+
+### Implementation Traceability
+
+Connects:
+
+Specification
+
+↓
+
+Software Component
+
+↓
+
+Interface
+
+↓
+
+Test
+
+↓
+
+Deployment
+
+This demonstrates how requirements become operational capability.
+
+---
+
+### Validation Traceability
+
+Connects:
+
+Educational Claim
+
+↓
+
+Evidence
+
+↓
+
+Evaluation
+
+↓
+
+Publication
+
+↓
+
+Revision
+
+This demonstrates how confidence in BRM-BOK increases over time.
+
+---
+
+## 6.5 Canonical Traceability Chain
+
+The minimum traceability chain within BRM-BOK is:
+
+Business Research Initiative Charter
+
+↓
+
+Business Research Mentoring Framework
+
+↓
+
+Constitutional Principle
+
+↓
+
+Educational Theory
+
+↓
+
+Methodology
+
+↓
+
+Reference Architecture
+
+↓
+
+Specification
+
+↓
+
+Implementation
+
+↓
+
+Validation Evidence
+
+No canonical implementation shall exist outside this chain.
+
+---
+
+## 6.6 Artifact Relationships
+
+Canonical artifacts may establish relationships such as:
+
+* derives from;
+* depends on;
+* implements;
+* validates;
+* extends;
+* constrains;
+* supersedes;
+* complements;
+* references.
+
+Relationship types should be explicit wherever practical.
+
+---
+
+## 6.7 Traceability Matrix
+
+Major artifacts should maintain a traceability matrix.
+
+Illustrative structure:
+
+| Source   | Relationship   | Target   |
+| -------- | -------------- | -------- |
+| BRMF-002 | informs        | DCRL-001 |
+| DCRL-001 | guides         | BRMM-001 |
+| BRMM-001 | implemented by | REA-001  |
+| REA-001  | realised by    | SPEC-001 |
+| SPEC-001 | implemented by | FEAT-001 |
+| FEAT-001 | verified by    | TEST-001 |
+
+The matrix becomes the authoritative navigation mechanism across BRM-BOK.
+
+---
+
+## 6.8 Bidirectional Traceability
+
+Where practical, traceability shall be bidirectional.
+
+Users should be able to determine:
+
+* which higher-level artifacts justify an implementation; and
+* which implementations depend upon a higher-level artifact.
+
+Bidirectional traceability improves impact analysis and governance review.
+
+---
+
+## 6.9 Traceability During Change
+
+Whenever a canonical artifact changes, reviewers shall evaluate:
+
+* affected parent artifacts;
+* affected dependent artifacts;
+* related decision records;
+* implementation implications;
+* validation implications.
+
+No significant change shall be approved without traceability analysis.
+
+---
+
+## 6.10 Traceability Registers
+
+The following registers support traceability:
+
+* Document Register;
+* Identifier Register;
+* Decision Register;
+* Theory Register;
+* Methodology Register;
+* Architecture Register;
+* Validation Register.
+
+These registers collectively provide the authoritative traceability index.
+
+---
+
+## 6.11 Educational Rationale Record
+
+Every significant educational artifact should identify:
+
+* the educational problem addressed;
+* intended educational outcome;
+* affected stakeholders;
+* expected benefits;
+* supporting evidence;
+* validation approach.
+
+This forms the educational rationale record for the artifact.
+
+---
+
+## 6.12 Traceability Quality
+
+Traceability shall demonstrate:
+
+* completeness;
+* accuracy;
+* consistency;
+* transparency;
+* maintainability.
+
+Broken or ambiguous traceability should be treated as a governance defect.
+
+---
+
+## 6.13 AI and Traceability
+
+Artificial intelligence may assist in:
+
+* identifying missing links;
+* checking consistency;
+* generating traceability matrices;
+* analysing dependency impacts;
+* identifying orphaned artifacts.
+
+AI-generated traceability shall undergo human review before becoming canonical.
+
+---
+
+## 6.14 Impact Analysis
+
+Before approving a significant change, an impact analysis should identify:
+
+* affected documents;
+* affected theories;
+* affected methodologies;
+* affected architectures;
+* affected specifications;
+* affected implementations;
+* affected validation activities.
+
+Impact analysis supports responsible evolution of BRM-BOK.
+
+---
+
+## 6.15 Traceability Metrics
+
+The governance process should monitor:
+
+* percentage of artifacts with complete traceability;
+* orphaned artifacts;
+* unresolved dependencies;
+* broken references;
+* review completion rates;
+* traceability defects.
+
+These metrics support continuous improvement.
+
+---
+
+## 6.16 Normative Statements
+
+Within BRM-BOK:
+
+* Every canonical artifact **MUST** identify its parent artifacts.
+* Every implementation **MUST** trace to a governed specification.
+* Every specification **MUST** trace to educational intent.
+* Major changes **MUST** include traceability impact analysis.
+* Traceability defects **SHOULD** be corrected before canonical release.
+* Validation evidence **SHOULD** remain traceable to the educational claims it supports.
+
+---
+
+## 6.17 Acceptance Criteria
+
+Chapter 6 is complete when it:
+
+* establishes the BRM-BOK traceability framework;
+* defines traceability levels;
+* establishes the canonical traceability chain;
+* introduces traceability matrices;
+* defines impact analysis requirements;
+* establishes traceability quality expectations.
+
+---
+
+## Revision History
+
+| Version   | Date               | Description            |
+| --------- | ------------------ | ---------------------- |
+| 1.0 Draft | Foundation Phase 2 | Chapter 6 established. |

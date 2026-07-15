@@ -927,3 +927,345 @@ Chapter 3 is complete when it:
 | Version   | Date               | Description            |
 | --------- | ------------------ | ---------------------- |
 | 1.0 Draft | Foundation Phase 2 | Chapter 3 established. |
+
+
+# Chapter 4 — Governance and Decision Records
+
+---
+
+## 4.1 Purpose
+
+This chapter establishes the governance framework through which BRM-BOK evolves.
+
+Governance ensures that changes to the Body of Knowledge are deliberate, transparent, evidence-informed, and traceable. Every significant decision affecting the educational framework, theories, methodologies, architectures, specifications, or implementations shall be documented through a formal decision record.
+
+---
+
+## 4.2 Governance Objectives
+
+The governance framework has six primary objectives:
+
+* preserve conceptual integrity;
+* provide transparent decision-making;
+* support long-term maintainability;
+* ensure educational accountability;
+* enable traceability of major decisions;
+* facilitate institutional confidence.
+
+Governance protects the stability of BRM-BOK while allowing controlled evolution.
+
+---
+
+## 4.3 Governance Principles
+
+The governance process is guided by the following principles:
+
+1. Decisions shall be evidence-informed.
+2. Decisions shall be documented.
+3. Decisions shall be reviewable.
+4. Decisions shall be traceable.
+5. Decisions shall preserve educational purpose.
+6. Decisions shall remain understandable to future contributors.
+
+---
+
+## 4.4 Governance Layers
+
+Governance responsibilities exist at multiple layers.
+
+| Layer          | Primary Responsibility   |
+| -------------- | ------------------------ |
+| Initiative     | Strategic direction      |
+| Framework      | Educational principles   |
+| Theory         | Educational explanations |
+| Methodology    | Educational practice     |
+| Architecture   | Structural design        |
+| Specification  | Behavioural requirements |
+| Implementation | Operational realisation  |
+| Validation     | Evidence collection      |
+
+Each layer governs decisions appropriate to its scope.
+
+---
+
+## 4.5 Decision Record Types
+
+BRM-BOK recognises four primary decision record types.
+
+### Educational Decision Record (EDR)
+
+Records decisions affecting:
+
+* educational philosophy;
+* constitutional principles;
+* learning models;
+* educational policies.
+
+Example identifier:
+
+EDR-0001
+
+---
+
+### Theory Decision Record (TDR)
+
+Records decisions affecting:
+
+* educational theories;
+* conceptual models;
+* theoretical relationships;
+* explanatory constructs.
+
+Example identifier:
+
+TDR-0001
+
+---
+
+### Methodology Decision Record (MDR)
+
+Records decisions affecting:
+
+* mentoring methodology;
+* educational workflows;
+* mentoring processes;
+* capability assessment methods.
+
+Example identifier:
+
+MDR-0001
+
+---
+
+### Architecture Decision Record (ADR)
+
+Records decisions affecting:
+
+* reference architectures;
+* platform architecture;
+* knowledge graph architecture;
+* technical architecture.
+
+Example identifier:
+
+ADR-0001
+
+---
+
+## 4.6 Decision Record Structure
+
+Every decision record shall contain:
+
+* identifier;
+* title;
+* status;
+* date;
+* context;
+* problem statement;
+* alternatives considered;
+* decision;
+* rationale;
+* expected consequences;
+* affected artifacts;
+* related decision records;
+* implementation implications;
+* validation requirements.
+
+---
+
+## 4.7 Decision Lifecycle
+
+Each decision progresses through the following lifecycle:
+
+Proposal
+
+↓
+
+Discussion
+
+↓
+
+Review
+
+↓
+
+Accepted
+
+↓
+
+Implemented
+
+↓
+
+Validated
+
+↓
+
+Superseded (if necessary)
+
+↓
+
+Archived
+
+Historical decisions remain part of the permanent governance record.
+
+---
+
+## 4.8 Governance Review
+
+Significant proposals shall undergo structured review.
+
+Review should consider:
+
+* educational impact;
+* conceptual consistency;
+* traceability;
+* implementation implications;
+* validation strategy;
+* stakeholder impact;
+* long-term sustainability.
+
+---
+
+## 4.9 Authority Levels
+
+Different decisions require different levels of approval.
+
+| Decision Type           | Typical Authority   |
+| ----------------------- | ------------------- |
+| Editorial corrections   | Editor              |
+| Clarifications          | Editor + Reviewer   |
+| Educational principles  | Governance Board    |
+| New theories            | Governance Board    |
+| New methodologies       | Governance Board    |
+| Architectural changes   | Architecture Review |
+| Software implementation | Technical Review    |
+
+Until a formal governance board exists, the project founder acts as the approving authority.
+
+---
+
+## 4.10 Change Categories
+
+Changes shall be classified as:
+
+* Editorial
+* Clarification
+* Minor
+* Major
+* Foundational
+
+Foundational changes affect the Charter, BRMF, constitutional principles, or accepted foundational theories and require the highest level of scrutiny.
+
+---
+
+## 4.11 Governance Registers
+
+The following governance registers shall be maintained:
+
+* Document Register
+* Decision Register
+* Theory Register
+* Methodology Register
+* Architecture Register
+* Standards Register
+* Identifier Register
+* Review Register
+
+These registers constitute the authoritative governance index of BRM-BOK.
+
+---
+
+## 4.12 Governance Criteria
+
+Before approving a proposal, reviewers shall determine:
+
+1. Does it solve a genuine educational problem?
+2. Is it consistent with the Charter?
+3. Is it consistent with BRMF?
+4. Is it supported by evidence or a clear validation plan?
+5. Does it duplicate an existing concept?
+6. Can it be explained clearly?
+7. Is the expected educational value greater than the added complexity?
+
+---
+
+## 4.13 Governance and Traceability
+
+Every accepted decision shall identify:
+
+* affected canonical documents;
+* affected theories;
+* affected methodologies;
+* affected architectures;
+* affected specifications;
+* affected implementations;
+* affected validation activities.
+
+This maintains complete governance traceability.
+
+---
+
+## 4.14 AI Participation
+
+Artificial intelligence may assist in:
+
+* identifying inconsistencies;
+* analysing alternatives;
+* drafting decision records;
+* evaluating traceability;
+* reviewing completeness.
+
+Artificial intelligence shall not approve governance decisions.
+
+Approval remains a human responsibility.
+
+---
+
+## 4.15 Governance Metrics
+
+The governance process should be evaluated using indicators such as:
+
+* decision traceability;
+* review completion rate;
+* unresolved proposals;
+* superseded decisions;
+* governance turnaround time;
+* implementation compliance.
+
+These metrics support continuous improvement.
+
+---
+
+## 4.16 Normative Statements
+
+Within BRM-BOK:
+
+* Significant changes **MUST** be documented through an appropriate decision record.
+* Foundational changes **MUST** undergo governance review.
+* Accepted decisions **MUST** remain permanently traceable.
+* Decision records **MUST NOT** be deleted; they may only be superseded or retired.
+* AI **MUST NOT** act as the approving authority for governance decisions.
+
+---
+
+## 4.17 Acceptance Criteria
+
+Chapter 4 is complete when it:
+
+* defines the governance model;
+* establishes decision record types;
+* defines governance authority;
+* specifies review expectations;
+* establishes governance registers;
+* defines decision lifecycles and approval requirements.
+
+---
+
+## Revision History
+
+| Version   | Date               | Description            |
+| --------- | ------------------ | ---------------------- |
+| 1.0 Draft | Foundation Phase 2 | Chapter 4 established. |
+
+

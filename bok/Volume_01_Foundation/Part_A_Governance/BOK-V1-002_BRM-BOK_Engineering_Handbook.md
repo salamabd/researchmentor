@@ -232,3 +232,350 @@ Chapter 1 is complete when it:
 | Version   | Date               | Description                                                     |
 | --------- | ------------------ | --------------------------------------------------------------- |
 | 1.0 Draft | Foundation Phase 2 | Chapter 1 established; subsequent chapters pending integration. |
+
+
+# Chapter 2 — Engineering Principles
+
+---
+
+## 2.1 Purpose
+
+This chapter establishes the engineering principles that govern the creation, evolution, validation, and maintenance of the Business Research Mentoring Body of Knowledge (BRM-BOK).
+
+These principles are normative and shall guide all future canonical artifacts.
+
+Where conflicts arise, these principles take precedence over implementation preferences.
+
+---
+
+## 2.2 Principle 1 — Educational Purpose First
+
+Every artifact shall exist to solve a clearly defined educational problem.
+
+No framework, theory, methodology, architecture, specification, feature, or implementation shall be introduced solely because it is technically feasible or technologically fashionable.
+
+Educational need precedes technological capability.
+
+### Engineering Implications
+
+Every proposal shall identify:
+
+* the educational problem;
+* the intended educational outcome;
+* the stakeholders affected;
+* the expected educational benefit.
+
+---
+
+## 2.3 Principle 2 — Knowledge Before Software
+
+Educational knowledge shall be engineered before software implementation.
+
+The engineering sequence shall remain:
+
+Educational Need
+
+↓
+
+Framework
+
+↓
+
+Theory
+
+↓
+
+Methodology
+
+↓
+
+Architecture
+
+↓
+
+Specification
+
+↓
+
+Implementation
+
+↓
+
+Validation
+
+Software shall never become the source of educational policy.
+
+---
+
+## 2.4 Principle 3 — Complete Traceability
+
+Every canonical artifact shall participate in an unbroken traceability chain.
+
+The minimum traceability model is:
+
+Charter
+
+↓
+
+Framework
+
+↓
+
+Principle
+
+↓
+
+Theory
+
+↓
+
+Methodology
+
+↓
+
+Architecture
+
+↓
+
+Specification
+
+↓
+
+Implementation
+
+↓
+
+Validation Evidence
+
+Each engineering decision shall be explainable by reference to this chain.
+
+---
+
+## 2.5 Principle 4 — Separation of Concerns
+
+Each layer of BRM-BOK has a distinct responsibility.
+
+Frameworks establish governing principles.
+
+Theories explain educational phenomena.
+
+Methodologies define practice.
+
+Architectures organise systems.
+
+Specifications define behaviour.
+
+Implementations realise behaviour.
+
+Validation evaluates effectiveness.
+
+No layer should assume the responsibilities of another.
+
+---
+
+## 2.6 Principle 5 — Explainability
+
+Educational recommendations shall remain understandable to students, supervisors, reviewers, and institutions.
+
+Accordingly:
+
+* reasoning shall be explicit;
+* assumptions shall be identified;
+* educational intent shall be documented;
+* dependencies shall be traceable.
+
+Opaque educational behaviour is inconsistent with BRM-BOK.
+
+---
+
+## 2.7 Principle 6 — Academic Integrity
+
+The engineering process shall preserve the educational responsibilities of all stakeholders.
+
+Students remain responsible for scholarship.
+
+Supervisors remain responsible for academic judgement.
+
+Institutions remain responsible for academic governance.
+
+Artificial intelligence functions as an educational mentor and decision-support capability rather than an academic decision maker.
+
+---
+
+## 2.8 Principle 7 — Evidence-Based Evolution
+
+Canonical knowledge shall evolve through evidence rather than preference.
+
+Evidence may include:
+
+* peer-reviewed literature;
+* expert review;
+* pilot implementations;
+* institutional feedback;
+* empirical studies;
+* implementation experience.
+
+Concepts shall mature through validation rather than popularity.
+
+---
+
+## 2.9 Principle 8 — Controlled Innovation
+
+Innovation is encouraged when it:
+
+* addresses a genuine educational problem;
+* complements rather than duplicates existing concepts;
+* can be explained clearly;
+* supports educational objectives;
+* can be validated.
+
+Innovation shall not compromise coherence.
+
+---
+
+## 2.10 Principle 9 — Conceptual Stability
+
+Foundational concepts should change infrequently.
+
+Changes to:
+
+* the Charter;
+* BRMF;
+* foundational theories;
+* constitutional principles;
+
+require formal governance review.
+
+This protects long-term stability while allowing controlled evolution elsewhere.
+
+---
+
+## 2.11 Principle 10 — Simplicity
+
+Where two solutions satisfy the same educational objective, the simpler solution should normally be preferred.
+
+Complexity shall require explicit educational justification.
+
+The objective is not to minimise capability but to minimise unnecessary complexity.
+
+---
+
+## 2.12 Principle 11 — Reusability
+
+Educational models, governance mechanisms, engineering practices, and architectural patterns should be designed for reuse where appropriate.
+
+Reusable knowledge strengthens the long-term value of BRM-BOK.
+
+---
+
+## 2.13 Principle 12 — Continuous Improvement
+
+BRM-BOK is expected to evolve.
+
+Improvement shall occur through disciplined review rather than ad hoc modification.
+
+The improvement cycle is:
+
+Observe
+
+↓
+
+Evaluate
+
+↓
+
+Propose
+
+↓
+
+Review
+
+↓
+
+Approve
+
+↓
+
+Implement
+
+↓
+
+Validate
+
+↓
+
+Release
+
+↓
+
+Monitor
+
+This cycle shall govern all significant revisions.
+
+---
+
+## 2.14 Engineering Quality Attributes
+
+All canonical artifacts should demonstrate:
+
+* clarity;
+* consistency;
+* traceability;
+* educational relevance;
+* maintainability;
+* scalability;
+* testability;
+* explainability;
+* governance compliance.
+
+These attributes form the minimum quality baseline for BRM-BOK.
+
+---
+
+## 2.15 Engineering Decision Framework
+
+Before approving any significant proposal, reviewers shall consider:
+
+1. What educational problem does this solve?
+2. Does an equivalent concept already exist?
+3. Is the proposal traceable to higher-level principles?
+4. Does it strengthen researcher development?
+5. Can it be explained clearly?
+6. Can it be validated?
+7. Will it remain valuable over the long term?
+
+Only proposals satisfying these questions should become canonical.
+
+---
+
+## 2.16 Normative Statements
+
+Within BRM-BOK:
+
+* Every canonical artifact **MUST** conform to these engineering principles.
+* Educational purpose **MUST** take precedence over implementation convenience.
+* Engineering decisions **MUST** remain traceable.
+* Significant conceptual changes **MUST** undergo governance review.
+* Educational recommendations **SHOULD** remain explainable.
+* Canonical concepts **SHOULD** evolve only through evidence.
+* Artificial intelligence **MUST NOT** establish canonical educational knowledge without human approval.
+
+---
+
+## 2.17 Acceptance Criteria
+
+Chapter 2 is complete when it:
+
+* establishes the permanent engineering principles of BRM-BOK;
+* defines the relationship between educational purpose and engineering practice;
+* introduces the engineering decision framework;
+* defines minimum quality expectations;
+* establishes the normative basis for all subsequent chapters.
+
+---
+
+## Revision History
+
+| Version   | Date               | Description            |
+| --------- | ------------------ | ---------------------- |
+| 1.0 Draft | Foundation Phase 2 | Chapter 2 established. |

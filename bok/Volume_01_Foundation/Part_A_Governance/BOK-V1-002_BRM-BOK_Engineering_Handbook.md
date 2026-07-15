@@ -1269,3 +1269,379 @@ Chapter 4 is complete when it:
 | 1.0 Draft | Foundation Phase 2 | Chapter 4 established. |
 
 
+# Chapter 5 — Lifecycle Management
+
+---
+
+## 5.1 Purpose
+
+This chapter defines the engineering lifecycle governing all canonical artifacts within the Business Research Mentoring Body of Knowledge (BRM-BOK).
+
+Lifecycle management ensures that every artifact is created, reviewed, approved, evolved, and retired in a consistent, transparent, and traceable manner.
+
+The objective is to preserve knowledge integrity while supporting controlled innovation and continuous improvement.
+
+---
+
+## 5.2 Scope
+
+This lifecycle applies to all canonical engineering artifacts, including:
+
+* standards;
+* charters;
+* frameworks;
+* theories;
+* methodologies;
+* architectures;
+* models;
+* specifications;
+* registers;
+* software requirements;
+* validation artifacts.
+
+Operational software lifecycles are outside the scope of this chapter.
+
+---
+
+## 5.3 Engineering Lifecycle
+
+Every canonical artifact progresses through the following lifecycle.
+
+Idea
+
+↓
+
+Proposal
+
+↓
+
+Working Draft
+
+↓
+
+Review
+
+↓
+
+Accepted Draft
+
+↓
+
+Canonical
+
+↓
+
+Validated
+
+↓
+
+Maintained
+
+↓
+
+Superseded (if required)
+
+↓
+
+Retired
+
+Movement between stages requires governance approval appropriate to the artifact type.
+
+---
+
+## 5.4 Lifecycle Stage Definitions
+
+### Idea
+
+An initial concept recorded for future consideration.
+
+Ideas are exploratory and are not part of BRM-BOK.
+
+---
+
+### Proposal
+
+A structured description of a potential artifact or change.
+
+The proposal identifies:
+
+* educational problem;
+* rationale;
+* expected benefits;
+* dependencies;
+* anticipated stakeholders.
+
+---
+
+### Working Draft
+
+The proposal is developed into a structured draft.
+
+Working drafts may change substantially during review.
+
+They are not normative.
+
+---
+
+### Review
+
+The artifact undergoes structured review.
+
+Review examines:
+
+* educational consistency;
+* conceptual clarity;
+* governance compliance;
+* traceability;
+* evidence;
+* implementation implications.
+
+---
+
+### Accepted Draft
+
+The artifact has successfully completed review.
+
+Only editorial refinement should occur before canonical publication.
+
+---
+
+### Canonical
+
+The artifact becomes an official component of BRM-BOK.
+
+Canonical artifacts are normative unless explicitly identified as informative.
+
+---
+
+### Validated
+
+The artifact has accumulated sufficient evidence through:
+
+* scholarly review;
+* institutional application;
+* implementation experience;
+* empirical evaluation.
+
+Validation strengthens confidence but does not prevent future refinement.
+
+---
+
+### Maintained
+
+Canonical artifacts remain under active stewardship.
+
+Maintenance activities include:
+
+* editorial improvements;
+* cross-reference updates;
+* terminology alignment;
+* governance review.
+
+Maintenance should preserve conceptual stability.
+
+---
+
+### Superseded
+
+An artifact may be replaced by a newer version.
+
+Superseded artifacts remain permanently accessible for historical traceability.
+
+---
+
+### Retired
+
+An artifact is no longer recommended for future use.
+
+Retirement does not imply deletion.
+
+Historical preservation remains mandatory.
+
+---
+
+## 5.5 Lifecycle Governance
+
+Each lifecycle transition requires explicit approval.
+
+| Transition                 | Minimum Approval     |
+| -------------------------- | -------------------- |
+| Idea → Proposal            | Contributor          |
+| Proposal → Working Draft   | Editor               |
+| Working Draft → Review     | Editor               |
+| Review → Accepted Draft    | Reviewer             |
+| Accepted Draft → Canonical | Governance Authority |
+| Canonical → Validated      | Governance Authority |
+| Canonical → Superseded     | Governance Authority |
+| Canonical → Retired        | Governance Authority |
+
+Authority levels may evolve as the governance structure matures.
+
+---
+
+## 5.6 Version Management
+
+Artifacts shall follow semantic versioning principles adapted for BRM-BOK.
+
+Examples:
+
+* 1.0 Draft
+* 1.0 Accepted
+* 1.0 Canonical
+* 1.1 Draft
+* 2.0 Draft
+
+Major versions indicate substantive conceptual change.
+
+Minor versions indicate controlled refinement.
+
+Editorial corrections should not alter conceptual meaning.
+
+---
+
+## 5.7 Artifact Status
+
+Each canonical artifact shall clearly indicate one of the following statuses:
+
+* Proposal
+* Working Draft
+* Draft for Review
+* Accepted Draft
+* Canonical
+* Validated
+* Superseded
+* Retired
+
+Status shall appear within the metadata.
+
+---
+
+## 5.8 Change Categories
+
+Changes shall be classified according to their impact.
+
+### Editorial
+
+Grammar, formatting, and presentation.
+
+### Clarification
+
+Improved explanation without conceptual change.
+
+### Minor
+
+Limited conceptual refinement.
+
+### Major
+
+Substantive modification requiring governance review.
+
+### Foundational
+
+Changes affecting:
+
+* Charter;
+* BRMF;
+* constitutional principles;
+* foundational theories.
+
+Foundational changes require the highest level of review.
+
+---
+
+## 5.9 Dependency Management
+
+Artifacts shall identify:
+
+* parent artifacts;
+* dependent artifacts;
+* related artifacts.
+
+Changes affecting parent artifacts require dependency analysis before approval.
+
+---
+
+## 5.10 Backward Compatibility
+
+Whenever practical, revisions should preserve compatibility with existing canonical artifacts.
+
+Where compatibility cannot be maintained:
+
+* affected artifacts shall be identified;
+* migration guidance shall be provided;
+* superseded artifacts shall remain archived.
+
+---
+
+## 5.11 Preservation
+
+Canonical artifacts constitute the permanent scholarly record of BRM-BOK.
+
+Accordingly:
+
+* historical versions shall remain accessible;
+* identifiers shall never be reused;
+* revision histories shall remain complete;
+* retired artifacts shall not be deleted.
+
+---
+
+## 5.12 Lifecycle Metrics
+
+Lifecycle management should monitor:
+
+* number of active proposals;
+* review duration;
+* acceptance rate;
+* validation progress;
+* superseded artifacts;
+* maintenance backlog.
+
+These indicators support governance and planning.
+
+---
+
+## 5.13 Lifecycle Review
+
+Periodic reviews should evaluate whether canonical artifacts remain:
+
+* educationally relevant;
+* internally consistent;
+* supported by evidence;
+* aligned with the Charter;
+* aligned with BRMF.
+
+Review cycles should be defined within artifact metadata.
+
+---
+
+## 5.14 Normative Statements
+
+Within BRM-BOK:
+
+* Every canonical artifact **MUST** follow the engineering lifecycle.
+* Canonical artifacts **MUST** identify their lifecycle status.
+* Historical artifacts **MUST NOT** be deleted.
+* Major lifecycle transitions **MUST** undergo governance approval.
+* Superseded artifacts **SHOULD** include migration guidance where appropriate.
+
+---
+
+## 5.15 Acceptance Criteria
+
+Chapter 5 is complete when it:
+
+* defines the engineering lifecycle;
+* establishes lifecycle stages;
+* defines lifecycle governance;
+* specifies version management;
+* defines artifact status;
+* establishes preservation requirements.
+
+---
+
+## Revision History
+
+| Version   | Date               | Description            |
+| --------- | ------------------ | ---------------------- |
+| 1.0 Draft | Foundation Phase 2 | Chapter 5 established. |

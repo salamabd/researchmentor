@@ -2907,3 +2907,297 @@ Chapter 9 is complete when it:
 | Version   | Date               | Description            |
 | --------- | ------------------ | ---------------------- |
 | 1.0 Draft | Foundation Phase 2 | Chapter 9 established. |
+
+
+# Chapter 10 — Stewardship, Continuous Improvement, Innovation, and Evolution
+
+---
+
+## 10.1 Purpose
+
+This chapter establishes the long-term stewardship model governing the evolution of the Business Research Mentoring Body of Knowledge (BRM-BOK).
+
+The purpose of stewardship is to ensure that BRM-BOK remains educationally relevant, intellectually coherent, evidence-informed, and responsibly governed while adapting to changes in educational practice, research methodology, and technology.
+
+Stewardship recognises that enduring bodies of knowledge require continuous care rather than periodic reconstruction.
+
+---
+
+## 10.2 Scope
+
+This chapter applies to the ongoing stewardship of:
+
+* the BRM-BOK as a whole;
+* canonical documents;
+* educational theories;
+* mentoring methodologies;
+* reference architectures;
+* specifications;
+* software implementations;
+* governance processes;
+* validation evidence.
+
+---
+
+## 10.3 Stewardship Philosophy
+
+Stewardship is the long-term responsibility for preserving and improving the integrity of BRM-BOK.
+
+Stewardship balances two complementary objectives:
+
+* preserving conceptual stability;
+* enabling responsible innovation.
+
+Neither objective should dominate the other.
+
+Progress without stability produces fragmentation.
+
+Stability without progress produces obsolescence.
+
+---
+
+## 10.4 Continuous Improvement
+
+Continuous improvement is an ongoing, evidence-informed process of enhancing BRM-BOK.
+
+Improvement activities may include:
+
+* refining educational concepts;
+* improving governance;
+* strengthening traceability;
+* clarifying terminology;
+* improving methodologies;
+* simplifying architectures;
+* incorporating validated research findings.
+
+Improvement should be incremental whenever practical.
+
+---
+
+## 10.5 Innovation
+
+Innovation is encouraged when it demonstrably strengthens researcher development or the quality of BRM-BOK.
+
+Innovation proposals should identify:
+
+* the educational opportunity;
+* supporting evidence;
+* anticipated benefits;
+* potential risks;
+* validation strategy;
+* implications for existing artifacts.
+
+Innovation shall complement, rather than disrupt, the coherence of the Body of Knowledge.
+
+---
+
+## 10.6 Evolution
+
+Evolution is the governed process through which BRM-BOK adapts over time.
+
+Evolution should be driven by:
+
+* empirical evidence;
+* educational research;
+* institutional experience;
+* implementation feedback;
+* scholarly review;
+* technological developments that support educational objectives.
+
+Evolution shall preserve continuity with the constitutional principles established in Volume I.
+
+---
+
+## 10.7 Lessons Learned
+
+Significant initiatives should record lessons learned concerning:
+
+* educational effectiveness;
+* governance;
+* implementation;
+* collaboration;
+* quality management;
+* stakeholder engagement.
+
+Lessons learned support organisational memory and informed decision-making.
+
+---
+
+## 10.8 Periodic Review
+
+Canonical artifacts shall undergo periodic review according to their defined review cycle.
+
+Reviews should examine:
+
+* educational relevance;
+* conceptual consistency;
+* governance alignment;
+* evidence status;
+* implementation experience;
+* opportunities for improvement.
+
+Periodic review supports responsible stewardship without encouraging unnecessary change.
+
+---
+
+## 10.9 Maturity Assessment
+
+The maturity of BRM-BOK should be evaluated across multiple dimensions.
+
+Illustrative dimensions include:
+
+* governance maturity;
+* educational maturity;
+* methodological maturity;
+* architectural maturity;
+* implementation maturity;
+* validation maturity;
+* institutional adoption.
+
+Maturity assessment guides long-term planning rather than acting as an end in itself.
+
+---
+
+## 10.10 Community Contributions
+
+Future contributors may propose enhancements to BRM-BOK.
+
+Contributions should:
+
+* align with the Charter;
+* support educational objectives;
+* follow governance processes;
+* satisfy quality expectations;
+* remain traceable.
+
+Acceptance of contributions is determined through established governance procedures.
+
+---
+
+## 10.11 Long-Term Stewardship
+
+Long-term stewardship requires:
+
+* preservation of institutional knowledge;
+* succession planning for governance roles;
+* maintenance of canonical repositories;
+* sustained scholarly engagement;
+* transparent decision-making;
+* responsible adoption of emerging technologies.
+
+Stewardship is an enduring obligation rather than a project phase.
+
+---
+
+## 10.12 Innovation Governance
+
+Innovation shall be governed through:
+
+* structured proposals;
+* evidence-informed review;
+* controlled experimentation;
+* pilot evaluation;
+* validation;
+* governed adoption.
+
+Experimental ideas shall not become canonical without successful completion of the engineering lifecycle.
+
+---
+
+## 10.13 Sustainability
+
+The sustainability of BRM-BOK depends upon:
+
+* conceptual coherence;
+* governance discipline;
+* educational relevance;
+* maintainable documentation;
+* active stewardship;
+* institutional support.
+
+Sustainability should be considered in every significant engineering decision.
+
+---
+
+## 10.14 Continuous Improvement Cycle
+
+The preferred improvement cycle is:
+
+Observe
+
+↓
+
+Analyse
+
+↓
+
+Learn
+
+↓
+
+Propose
+
+↓
+
+Review
+
+↓
+
+Approve
+
+↓
+
+Implement
+
+↓
+
+Validate
+
+↓
+
+Release
+
+↓
+
+Monitor
+
+↓
+
+Repeat
+
+This cycle integrates governance, quality management, validation, and stewardship into a continuous process.
+
+---
+
+## 10.15 Normative Statements
+
+Within BRM-BOK:
+
+* Stewardship **MUST** preserve the long-term integrity of the Body of Knowledge.
+* Continuous improvement **MUST** be evidence-informed.
+* Innovation **MUST NOT** compromise constitutional principles.
+* Canonical evolution **MUST** follow established governance processes.
+* Significant improvements **SHOULD** be validated before canonical adoption.
+* Stewardship responsibilities **SHOULD** be maintained independently of specific technologies or implementation platforms.
+
+---
+
+## 10.16 Acceptance Criteria
+
+Chapter 10 is complete when it:
+
+* establishes the stewardship philosophy;
+* defines continuous improvement and innovation;
+* establishes long-term evolution principles;
+* introduces maturity assessment;
+* defines contribution expectations;
+* completes the Engineering Handbook.
+
+---
+
+## Revision History
+
+| Version   | Date               | Description                                                |
+| --------- | ------------------ | ---------------------------------------------------------- |
+| 1.0 Draft | Foundation Phase 2 | Chapter 10 established and Engineering Handbook completed. |
+

@@ -1,5 +1,30 @@
+# Dependencies and build outputs
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
 # macOS
 .DS_Store
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Cursor
+.cursor/
 
 # Python
 __pycache__/
@@ -7,28 +32,13 @@ __pycache__/
 .venv/
 venv/
 
-# VS Code
-.vscode/
-
-# Cursor
-.cursor/
-
 # Flutter
 .dart_tool/
 build/
 
-# Logs
-*.log
-
 # Temporary
 tmp/
 temp/
-
-# Environment
-.env
-
-# IDE
-.idea/
 
 # Generated documentation
 *.bak

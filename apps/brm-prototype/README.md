@@ -12,16 +12,16 @@ Guide a business-school student through one research decision at a time, preserv
 - **Nature:** Static, deterministic prototype (no live AI analysis)
 - **Persistence:** Browser `localStorage` under the key `brm.prototype.v1`
 
-## Architecture (BUILD-002)
+## Architecture
 
 Dependency direction:
 
 ```text
 React UI → Zustand adapter → SessionService (application) → Domain
-                                      ↕
-                         ResearchSessionRepository (port)
-                                      ↕
-                   LocalStorageResearchSessionRepository
+                ↓                         ↕
+     BlueprintRegistry          ResearchSessionRepository
+                ↑                         ↕
+     Validated Blueprint        LocalStorage adapter
 ```
 
 | Layer | Responsibility |
@@ -30,14 +30,15 @@ React UI → Zustand adapter → SessionService (application) → Domain
 | `src/state` | Zustand React state adapter |
 | `src/application` | Use-case orchestration and persistence calls |
 | `src/domain` | `ResearchSession`, lifecycle, pure Decision Record builder |
+| `src/blueprints` | Blueprint definitions, Zod validation, registry |
 | `src/persistence` | Repository port and LocalStorage adapter |
-| `src/app/composition.ts` | Constructs repository + service |
+| `src/app/composition.ts` | Constructs repository, session service, and blueprint registry |
 
-BUILD-002 does not add AI, authentication, backend services, or additional blueprints.
+### BUILD-003
 
-## Not in BUILD-001 / BUILD-002
+Validated Blueprint definitions and an in-process registry supply BP-001 questions and alternatives to pages. Blueprint definitions include validated `purpose` metadata (BP-001 uses `purpose: "decision"`). There is no remote blueprint loading and no AI.
 
-Authentication, backend services, AI integration, and additional decision blueprints are out of scope for this baseline.
+BUILD-002 domain/application/persistence boundaries remain in place. Authentication, backend services, AI integration, and additional decision blueprints are out of scope.
 
 ## Prerequisites
 

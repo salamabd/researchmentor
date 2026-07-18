@@ -1,9 +1,9 @@
-import { bp001, mockAlternatives } from "../blueprints/BP-001/blueprint";
 import { usePrototypeStore } from "../state/usePrototypeStore";
 
 export default function RecordPage() {
   const s = usePrototypeStore();
-  const alt = mockAlternatives.find((a) => a.id === s.decision?.alternativeId);
+  const blueprint = s.getBlueprint();
+  const alt = blueprint.alternatives.find((a) => a.id === s.decision?.alternativeId);
   const exportRecord = () => {
     const data = s.createDecisionRecord();
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
@@ -39,7 +39,7 @@ export default function RecordPage() {
       </div>
       <h3>Reasoning trail</h3>
       <div className="timeline">
-        {bp001.questions.map((q) => (
+        {blueprint.questions.map((q) => (
           <article key={q.id}>
             <span>{q.stage}</span>
             <h4>{q.text}</h4>

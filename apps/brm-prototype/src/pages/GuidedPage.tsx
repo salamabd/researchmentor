@@ -1,20 +1,21 @@
 import { useNavigate } from "react-router-dom";
-import { bp001 } from "../blueprints/BP-001/blueprint";
 import { usePrototypeStore } from "../state/usePrototypeStore";
 import Progress from "../components/Progress";
+
 export default function GuidedPage() {
   const i = usePrototypeStore((s) => s.currentQuestionIndex);
   const answers = usePrototypeStore((s) => s.answers);
   const save = usePrototypeStore((s) => s.saveAnswer);
   const next = usePrototypeStore((s) => s.nextQuestion);
   const prev = usePrototypeStore((s) => s.previousQuestion);
+  const blueprint = usePrototypeStore((s) => s.getBlueprint());
   const nav = useNavigate();
-  const q = bp001.questions[Math.min(i, bp001.questions.length - 1)];
+  const q = blueprint.questions[Math.min(i, blueprint.questions.length - 1)];
   const current = answers.find((a) => a.questionId === q.id)?.text ?? "";
-  const final = i >= bp001.questions.length - 1;
+  const final = i >= blueprint.questions.length - 1;
   return (
     <section className="panel">
-      <Progress value={i + 1} total={bp001.questions.length} label={q.stage} />
+      <Progress value={i + 1} total={blueprint.questions.length} label={q.stage} />
       <div className="question-card">
         <span className="eyebrow">Current mentoring question</span>
         <h2>{q.text}</h2>

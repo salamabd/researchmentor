@@ -1,9 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { mockAlternatives } from "../blueprints/BP-001/blueprint";
 import { usePrototypeStore } from "../state/usePrototypeStore";
+
 export default function DecisionPage() {
   const decision = usePrototypeStore((s) => s.decision);
   const setDecision = usePrototypeStore((s) => s.setDecision);
+  const blueprint = usePrototypeStore((s) => s.getBlueprint());
   const nav = useNavigate();
   const id = decision?.alternativeId ?? "";
   const justification = decision?.justification ?? "";
@@ -24,7 +25,7 @@ export default function DecisionPage() {
         These are not answers. They are contrasting directions designed to make trade-offs visible.
       </p>
       <div className="cards">
-        {mockAlternatives.map((a) => (
+        {blueprint.alternatives.map((a) => (
           <label className={`alternative ${id === a.id ? "selected" : ""}`} key={a.id}>
             <input
               type="radio"

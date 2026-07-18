@@ -1,6 +1,10 @@
-import type { Blueprint, Alternative } from "../../domain/types";
+import type { Alternative, Blueprint } from "../../domain/types";
+
+/** Authoritative BP-001 Blueprint definition (BUILD-001 content preserved). */
 export const bp001: Blueprint = {
   id: "BP-001",
+  version: "1.0.0",
+  purpose: "decision",
   title: "Choosing a Research Topic",
   questions: [
     {
@@ -67,27 +71,30 @@ export const bp001: Blueprint = {
       rationale: "Reflection makes the learning visible.",
     },
   ],
+  alternatives: [
+    {
+      id: "A",
+      title: "Narrow organisational case",
+      description: "Study the issue within one accessible organisation or business unit.",
+      strengths: ["High feasibility", "Clear context"],
+      risks: ["Limited generalisability", "Access dependency"],
+    },
+    {
+      id: "B",
+      title: "Cross-sectional industry study",
+      description: "Compare the issue across several organisations in one industry.",
+      strengths: ["Broader relevance", "Comparative insight"],
+      risks: ["Harder recruitment", "More complex data"],
+    },
+    {
+      id: "C",
+      title: "Focused stakeholder study",
+      description: "Concentrate on one stakeholder group and one clearly defined outcome.",
+      strengths: ["Strong scope control", "Clear analytical focus"],
+      risks: ["May overlook wider context", "Requires precise stakeholder definition"],
+    },
+  ],
 };
-export const mockAlternatives: Alternative[] = [
-  {
-    id: "A",
-    title: "Narrow organisational case",
-    description: "Study the issue within one accessible organisation or business unit.",
-    strengths: ["High feasibility", "Clear context"],
-    risks: ["Limited generalisability", "Access dependency"],
-  },
-  {
-    id: "B",
-    title: "Cross-sectional industry study",
-    description: "Compare the issue across several organisations in one industry.",
-    strengths: ["Broader relevance", "Comparative insight"],
-    risks: ["Harder recruitment", "More complex data"],
-  },
-  {
-    id: "C",
-    title: "Focused stakeholder study",
-    description: "Concentrate on one stakeholder group and one clearly defined outcome.",
-    strengths: ["Strong scope control", "Clear analytical focus"],
-    risks: ["May overlook wider context", "Requires precise stakeholder definition"],
-  },
-];
+
+/** Compatibility alias — same array as `bp001.alternatives`. */
+export const mockAlternatives: Alternative[] = bp001.alternatives;

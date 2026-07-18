@@ -32,6 +32,7 @@ export interface Decision {
 
 /** Presentation projection of working session fields (BUILD-001 compatible). */
 export interface PrototypeState {
+  blueprintId: string;
   profile: StudentProfile;
   initialIdea: string;
   answers: Answer[];
@@ -40,6 +41,8 @@ export interface PrototypeState {
   supervisorFeedback: string;
   completed: boolean;
 }
+
+export type BlueprintPurpose = "decision" | "reflection" | "evaluation" | "planning" | "mentoring";
 
 export interface BlueprintQuestion {
   id: string;
@@ -50,8 +53,11 @@ export interface BlueprintQuestion {
 
 export interface Blueprint {
   id: string;
+  version: string;
+  purpose: BlueprintPurpose;
   title: string;
   questions: BlueprintQuestion[];
+  alternatives: Alternative[];
 }
 
 export interface ResearchSession {

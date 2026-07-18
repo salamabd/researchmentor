@@ -258,6 +258,7 @@ export function normaliseLoadedSession(
 
 export function toPrototypeState(session: ResearchSession) {
   return {
+    blueprintId: session.blueprintId,
     profile: session.profile,
     initialIdea: session.initialIdea,
     answers: session.answers,

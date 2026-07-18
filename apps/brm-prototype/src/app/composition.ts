@@ -1,3 +1,4 @@
+import { BlueprintExecutionService } from "../application/blueprintExecutionService";
 import { createSessionService, type SessionService } from "../application/sessionService";
 import { bp001 } from "../blueprints/BP-001/blueprint";
 import { createBlueprintRegistry, type BlueprintRegistry } from "../blueprints/registry";
@@ -8,5 +9,11 @@ const repository = new LocalStorageResearchSessionRepository();
 /** Validated in-process blueprint registry (BUILD-003). */
 export const blueprintRegistry: BlueprintRegistry = createBlueprintRegistry([bp001]);
 
-/** Composition root: LocalStorage repository + application session service. */
+/** Session use cases and persistence (BUILD-002). */
 export const sessionService: SessionService = createSessionService({ repository });
+
+/** Blueprint-aware application coordinator (BUILD-004). */
+export const blueprintExecutionService = new BlueprintExecutionService(
+  sessionService,
+  blueprintRegistry,
+);

@@ -17,28 +17,32 @@ Guide a business-school student through one research decision at a time, preserv
 Dependency direction:
 
 ```text
-React UI → Zustand adapter → SessionService (application) → Domain
-                ↓                         ↕
-     BlueprintRegistry          ResearchSessionRepository
-                ↑                         ↕
-     Validated Blueprint        LocalStorage adapter
+React UI
+    ↓
+Zustand UI adapter
+    ↓
+BlueprintExecutionService
+    ↓
+SessionService + BlueprintRegistry
+    ↓
+Domain + ResearchSessionRepository → LocalStorage
 ```
 
 | Layer | Responsibility |
 | --- | --- |
 | `src/pages`, `src/components` | Presentation only |
-| `src/state` | Zustand React state adapter |
-| `src/application` | Use-case orchestration and persistence calls |
+| `src/state` | Zustand React state adapter (no registry orchestration) |
+| `src/application` | SessionService, BlueprintExecutionService |
 | `src/domain` | `ResearchSession`, lifecycle, pure Decision Record builder |
 | `src/blueprints` | Blueprint definitions, Zod validation, registry |
 | `src/persistence` | Repository port and LocalStorage adapter |
-| `src/app/composition.ts` | Constructs repository, session service, and blueprint registry |
+| `src/app/composition.ts` | Constructs repository, services, and registry |
 
-### BUILD-003
+### BUILD-003 / BUILD-004
 
-Validated Blueprint definitions and an in-process registry supply BP-001 questions and alternatives to pages. Blueprint definitions include validated `purpose` metadata (BP-001 uses `purpose: "decision"`). There is no remote blueprint loading and no AI.
+Validated Blueprint definitions (including `purpose` metadata) are registered in-process. BUILD-004 coordinates Blueprint-aware operations through `BlueprintExecutionService` so Zustand no longer talks to the registry directly. There is no remote blueprint loading and no AI.
 
-BUILD-002 domain/application/persistence boundaries remain in place. Authentication, backend services, AI integration, and additional decision blueprints are out of scope.
+Authentication, backend services, AI integration, and additional decision blueprints remain out of scope.
 
 ## Prerequisites
 

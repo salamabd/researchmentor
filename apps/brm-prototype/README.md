@@ -12,7 +12,30 @@ Guide a business-school student through one research decision at a time, preserv
 - **Nature:** Static, deterministic prototype (no live AI analysis)
 - **Persistence:** Browser `localStorage` under the key `brm.prototype.v1`
 
-## Not in BUILD-001
+## Architecture (BUILD-002)
+
+Dependency direction:
+
+```text
+React UI → Zustand adapter → SessionService (application) → Domain
+                                      ↕
+                         ResearchSessionRepository (port)
+                                      ↕
+                   LocalStorageResearchSessionRepository
+```
+
+| Layer | Responsibility |
+| --- | --- |
+| `src/pages`, `src/components` | Presentation only |
+| `src/state` | Zustand React state adapter |
+| `src/application` | Use-case orchestration and persistence calls |
+| `src/domain` | `ResearchSession`, lifecycle, pure Decision Record builder |
+| `src/persistence` | Repository port and LocalStorage adapter |
+| `src/app/composition.ts` | Constructs repository + service |
+
+BUILD-002 does not add AI, authentication, backend services, or additional blueprints.
+
+## Not in BUILD-001 / BUILD-002
 
 Authentication, backend services, AI integration, and additional decision blueprints are out of scope for this baseline.
 
@@ -39,3 +62,4 @@ npm run build
 | `npm test` | Run Vitest once |
 | `npm run build` | Typecheck and produce a production build in `dist/` |
 | `npm run preview` | Preview the production build locally |
+| `npm run format` | Format source with Prettier |

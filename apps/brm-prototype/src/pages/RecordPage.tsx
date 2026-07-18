@@ -1,20 +1,11 @@
 import { bp001, mockAlternatives } from "../blueprints/BP-001/blueprint";
 import { usePrototypeStore } from "../state/usePrototypeStore";
+
 export default function RecordPage() {
   const s = usePrototypeStore();
   const alt = mockAlternatives.find((a) => a.id === s.decision?.alternativeId);
   const exportRecord = () => {
-    const data = {
-      blueprint: bp001.id,
-      profile: s.profile,
-      initialIdea: s.initialIdea,
-      answers: s.answers,
-      decision: s.decision,
-      selectedDirection: alt,
-      supervisorFeedback: s.supervisorFeedback,
-      completed: s.completed,
-      exportedAt: new Date().toISOString(),
-    };
+    const data = s.createDecisionRecord();
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");

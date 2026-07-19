@@ -171,6 +171,24 @@ textarea {
   background: #eef2ff;
   color: #3730a3;
 }
+.diagnostics-banner {
+  width: min(1100px, 92vw);
+  margin: 1rem auto 0;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid #f59e0b;
+  border-radius: 12px;
+  background: #fffbeb;
+  color: #78350f;
+}
+.diagnostics-banner strong {
+  display: block;
+  font-size: 0.95rem;
+}
+.diagnostics-banner p {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
 .progress {
   margin-bottom: 2rem;
 }

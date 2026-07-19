@@ -13,6 +13,7 @@ import {
   NoCurrentQuestionError,
   UnknownBlueprintError,
 } from "./errors";
+import { evaluateSessionDiagnostics, type SessionDiagnosticsReport } from "./sessionDiagnostics";
 
 /**
  * Application coordinator for Blueprint-aware session operations.
@@ -78,6 +79,16 @@ export class BlueprintExecutionService {
   createDecisionRecord(): DecisionRecord {
     const blueprint = this.getActiveBlueprint();
     return this.sessionService.createDecisionRecordExport(blueprint.alternatives);
+  }
+
+  /**
+   * Resolve the active Blueprint and evaluate non-destructive session diagnostics.
+   * Does not persist or repair the session. Throws UnknownBlueprintError when unresolved.
+   */
+  getSessionDiagnostics(): SessionDiagnosticsReport {
+    const session = this.sessionService.getSession();
+    const blueprint = this.getActiveBlueprint();
+    return evaluateSessionDiagnostics(session, blueprint);
   }
 
   /**

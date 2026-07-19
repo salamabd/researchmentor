@@ -32,15 +32,15 @@ Domain + ResearchSessionRepository → LocalStorage
 | --- | --- |
 | `src/pages`, `src/components` | Presentation only |
 | `src/state` | Zustand React state adapter (no registry orchestration) |
-| `src/application` | SessionService, BlueprintExecutionService |
+| `src/application` | SessionService, BlueprintExecutionService, session diagnostics |
 | `src/domain` | `ResearchSession`, lifecycle, pure Decision Record builder |
 | `src/blueprints` | Blueprint definitions, Zod validation, registry |
 | `src/persistence` | Repository port and LocalStorage adapter |
 | `src/app/composition.ts` | Constructs repository, services, and registry |
 
-### BUILD-003 / BUILD-004
+### BUILD-003 / BUILD-004 / BUILD-005
 
-Validated Blueprint definitions (including `purpose` metadata) are registered in-process. BUILD-004 coordinates Blueprint-aware operations through `BlueprintExecutionService` so Zustand no longer talks to the registry directly. There is no remote blueprint loading and no AI.
+Validated Blueprint definitions (including `purpose` metadata) are registered in-process. BUILD-004 coordinates Blueprint-aware operations through `BlueprintExecutionService` so Zustand no longer talks to the registry directly. BUILD-005 adds a pure `evaluateSessionDiagnostics(session, blueprint)` evaluator, exposed via `BlueprintExecutionService.getSessionDiagnostics()` and a compact layout banner. Diagnostics are observational: they do not repair, migrate, or delete student work. Banner copy is covered by `formatSessionDiagnosticsBanner` unit tests; full React DOM automation for the banner is intentionally omitted. There is no remote blueprint loading and no AI.
 
 Authentication, backend services, AI integration, and additional decision blueprints remain out of scope.
 

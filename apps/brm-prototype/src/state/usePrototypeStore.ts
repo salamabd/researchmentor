@@ -9,10 +9,12 @@ import type {
   ResearchSession,
   StudentProfile,
 } from "../domain/types";
+import type { SessionDiagnosticsReport } from "../application/sessionDiagnostics";
 
 interface Store extends PrototypeState {
   status: ResearchSession["status"];
   getBlueprint: () => Blueprint;
+  getSessionDiagnostics: () => SessionDiagnosticsReport;
   setProfile: (p: StudentProfile) => void;
   setInitialIdea: (v: string) => void;
   saveAnswer: (questionId: string, text: string) => void;
@@ -37,6 +39,7 @@ const initialSession = sessionService.getSession();
 export const usePrototypeStore = create<Store>()((set) => ({
   ...fromSession(initialSession),
   getBlueprint: () => blueprintExecutionService.getActiveBlueprint(),
+  getSessionDiagnostics: () => blueprintExecutionService.getSessionDiagnostics(),
   setProfile: (profile) => set(fromSession(sessionService.updateProfile(profile))),
   setInitialIdea: (initialIdea) => set(fromSession(sessionService.updateInitialIdea(initialIdea))),
   saveAnswer: (questionId, text) => set(fromSession(sessionService.saveAnswer(questionId, text))),

@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
+import SessionDiagnosticsBanner from "./SessionDiagnosticsBanner";
+
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="app-shell">
@@ -15,6 +17,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           <NavLink to="/record">Record</NavLink>
         </nav>
       </header>
+      <SessionDiagnosticsBanner />
       <main>{children}</main>
       <footer>BP-001 · Choosing a Research Topic · Local-first prototype</footer>
     </div>

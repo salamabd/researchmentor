@@ -44,8 +44,40 @@ export interface PrototypeState {
 
 export type BlueprintPurpose = "decision" | "reflection" | "evaluation" | "planning" | "mentoring";
 
+/** BUILD-006 educational journey stage identifiers (not BlueprintQuestion.stage labels). */
+export type ResearchJourneyStageId =
+  | "ORIENTATION"
+  | "CONTEXT"
+  | "PROBLEM_FORMULATION"
+  | "CONSTRAINT_DISCOVERY"
+  | "ALTERNATIVE_EXAMINATION"
+  | "DECISION"
+  | "REFLECTION"
+  | "REVIEW";
+
+export const RESEARCH_JOURNEY_STAGE_IDS: readonly ResearchJourneyStageId[] = [
+  "ORIENTATION",
+  "CONTEXT",
+  "PROBLEM_FORMULATION",
+  "CONSTRAINT_DISCOVERY",
+  "ALTERNATIVE_EXAMINATION",
+  "DECISION",
+  "REFLECTION",
+  "REVIEW",
+] as const;
+
+export interface ResearchJourneyStage {
+  id: ResearchJourneyStageId;
+  title: string;
+  purpose: string;
+  learningObjectives?: string[];
+  questionIds: string[];
+  requiredQuestionIds: string[];
+}
+
 export interface BlueprintQuestion {
   id: string;
+  /** Free-form pedagogical label for a question (not a journey-stage id). */
   stage: string;
   text: string;
   rationale: string;
@@ -58,6 +90,8 @@ export interface Blueprint {
   title: string;
   questions: BlueprintQuestion[];
   alternatives: Alternative[];
+  /** Declarative educational journey (BUILD-006). Separate from question.stage labels. */
+  journeyStages: ResearchJourneyStage[];
 }
 
 export interface ResearchSession {

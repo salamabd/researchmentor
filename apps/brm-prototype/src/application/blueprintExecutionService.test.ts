@@ -6,8 +6,14 @@ import type { ResearchSession } from "../domain/types";
 import { InMemoryResearchSessionRepository } from "../persistence/inMemoryResearchSessionRepository";
 import type { ResearchSessionRepository } from "../persistence/researchSessionRepository";
 import { BlueprintExecutionService } from "./blueprintExecutionService";
-import { InvalidBlueprintAlternativeError, UnknownBlueprintError } from "./errors";
+import {
+  IncompleteResearchJourneyError,
+  InvalidBlueprintAlternativeError,
+  JourneyStageNotAvailableError,
+  UnknownBlueprintError,
+} from "./errors";
 import { createSessionService } from "./sessionService";
+import { getJourneyStage } from "./researchJourney";
 
 const NOW = "2026-07-18T20:00:00.000Z";
 
@@ -55,7 +61,8 @@ describe("BlueprintExecutionService", () => {
     const blueprint = execution.getActiveBlueprint();
     expect(blueprint.id).toBe("BP-001");
     expect(blueprint.purpose).toBe("decision");
-    expect(blueprint.questions).toHaveLength(10);
+    expect(blueprint.questions).toHaveLength(16);
+    expect(blueprint.journeyStages).toHaveLength(8);
   });
 
   it("throws UnknownBlueprintError for an explicit unknown blueprint id", () => {
@@ -93,7 +100,7 @@ describe("BlueprintExecutionService", () => {
 
   it("resolves the current question from the active Blueprint and session index", () => {
     const session = createNewSession(NOW, "s-q");
-    session.currentQuestionIndex = 2;
+    session.currentQuestionIndex = 3; // ORIENTATION_ACK, Q1, Q2, Q3
     const { execution } = createHarness(session);
     expect(execution.getCurrentQuestion().id).toBe("Q3");
     expect(execution.getCurrentQuestion().text).toBe("Who experiences this problem most directly?");
@@ -101,12 +108,13 @@ describe("BlueprintExecutionService", () => {
 
   it("navigates next using the active Blueprint question count and clamps at the end", () => {
     const session = createNewSession(NOW, "s-nav");
-    session.currentQuestionIndex = 8;
+    const lastIndex = bp001.questions.length - 1;
+    session.currentQuestionIndex = lastIndex - 1;
     const { execution } = createHarness(session);
     execution.goToNextQuestion();
-    expect(execution.getSession().currentQuestionIndex).toBe(9);
+    expect(execution.getSession().currentQuestionIndex).toBe(lastIndex);
     execution.goToNextQuestion();
-    expect(execution.getSession().currentQuestionIndex).toBe(9);
+    expect(execution.getSession().currentQuestionIndex).toBe(lastIndex);
   });
 
   it("retains previous-question lower-bound behaviour", () => {
@@ -265,5 +273,76 @@ describe("BlueprintExecutionService", () => {
     expect(report.diagnostics.find((d) => d.code === "ANSWER_QUESTION_UNKNOWN")?.entityId).toBe(
       "Q99",
     );
+  });
+
+  it("returns journey progress for the active Blueprint", () => {
+    const { execution } = createHarness();
+    const progress = execution.getResearchJourneyProgress();
+    expect(progress.currentStageId).toBe("ORIENTATION");
+    expect(progress.totalStages).toBe(8);
+    expect(execution.getResearchJourneyStage("PROBLEM_FORMULATION").title).toBe(
+      "Problem formulation",
+    );
+  });
+
+  it("blocks unavailable forward stages and allows available stages", () => {
+    const { execution } = createHarness();
+    expect(() => execution.assertResearchJourneyStageAvailable("DECISION")).toThrow(
+      JourneyStageNotAvailableError,
+    );
+    expect(execution.assertResearchJourneyStageAvailable("ORIENTATION").currentStageId).toBe(
+      "ORIENTATION",
+    );
+  });
+
+  it("rejects incomplete journey completion without mutating the session", () => {
+    const session = createNewSession(NOW, "incomplete-journey");
+    const { execution } = createHarness(session);
+    expect(() => execution.completeResearchJourney()).toThrow(IncompleteResearchJourneyError);
+    expect(execution.getSession().completed).toBe(false);
+    expect(execution.getSession().id).toBe("incomplete-journey");
+  });
+
+  it("completes a structurally complete journey through SessionService", () => {
+    let session = createNewSession(NOW, "complete-journey");
+    session.initialIdea = "Staff retention in retail operations";
+    const answer = (questionId: string, text: string) => {
+      session = {
+        ...session,
+        answers: [
+          ...session.answers.filter((a) => a.questionId !== questionId),
+          { questionId, text },
+        ],
+      };
+    };
+    answer("ORIENTATION_ACK", "Ready");
+    answer("Q1", "m");
+    answer("Q3", "s");
+    answer("Q2", "p");
+    answer("Q4", "e");
+    answer("Q5", "a");
+    answer("Q6", "b");
+    answer("Q7", "c");
+    answer("Q8", "d");
+    answer("Q9", "contrib");
+    answer("Q15", "trade-offs");
+    session = withDecision(
+      session,
+      { alternativeId: "A", justification: "Access", confidence: 70 },
+      NOW,
+    );
+    answer("Q10", "changed");
+    answer("Q11", "influenced");
+    answer("Q12", "uncertain");
+    answer("Q13", "evidence");
+    answer("Q14", "next");
+    expect(getJourneyStage(bp001, "REVIEW")).toBeTruthy();
+
+    const { execution, save } = createCountingHarness(session);
+    const savesBefore = save.mock.calls.length;
+    const completed = execution.completeResearchJourney();
+    expect(completed.completed).toBe(true);
+    expect(execution.getSession().completed).toBe(true);
+    expect(save.mock.calls.length).toBeGreaterThan(savesBefore);
   });
 });

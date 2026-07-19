@@ -7,6 +7,7 @@ describe("blueprint schema", () => {
   it("accepts the BP-001 definition", () => {
     expect(parseBlueprint(bp001).id).toBe("BP-001");
     expect(parseBlueprint(bp001).purpose).toBe("decision");
+    expect(parseBlueprint(bp001).journeyStages).toHaveLength(8);
   });
 
   it("rejects missing blueprint id", () => {
@@ -61,6 +62,61 @@ describe("blueprint schema", () => {
       ...bp001,
       alternatives: [bp001.alternatives[0], { ...bp001.alternatives[1], id: "A" }],
     });
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects a missing required journey stage", () => {
+    const result = safeParseBlueprint({
+      ...bp001,
+      journeyStages: bp001.journeyStages.filter((s) => s.id !== "PROBLEM_FORMULATION"),
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects duplicate journey stage ids", () => {
+    const result = safeParseBlueprint({
+      ...bp001,
+      journeyStages: [...bp001.journeyStages.slice(0, 7), bp001.journeyStages[0]],
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects an unknown referenced question id", () => {
+    const stages = bp001.journeyStages.map((stage) =>
+      stage.id === "CONTEXT"
+        ? { ...stage, questionIds: ["Q1", "Q99"], requiredQuestionIds: ["Q1", "Q99"] }
+        : stage,
+    );
+    const result = safeParseBlueprint({ ...bp001, journeyStages: stages });
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects a required question that is not in the stage question list", () => {
+    const stages = bp001.journeyStages.map((stage) =>
+      stage.id === "CONTEXT"
+        ? { ...stage, questionIds: ["Q1"], requiredQuestionIds: ["Q1", "Q3"] }
+        : stage,
+    );
+    const result = safeParseBlueprint({ ...bp001, journeyStages: stages });
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects duplicate required question ids within a stage", () => {
+    const stages = bp001.journeyStages.map((stage) =>
+      stage.id === "CONTEXT"
+        ? { ...stage, questionIds: ["Q1", "Q3"], requiredQuestionIds: ["Q1", "Q1"] }
+        : stage,
+    );
+    const result = safeParseBlueprint({ ...bp001, journeyStages: stages });
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects an invalid journey stage sequence", () => {
+    const swapped = [...bp001.journeyStages];
+    const tmp = swapped[1]!;
+    swapped[1] = swapped[2]!;
+    swapped[2] = tmp;
+    const result = safeParseBlueprint({ ...bp001, journeyStages: swapped });
     expect(result.success).toBe(false);
   });
 });

@@ -1,15 +1,18 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { usePrototypeStore } from "../state/usePrototypeStore";
 
 export default function SupervisorPage() {
   const s = usePrototypeStore();
-  const nav = useNavigate();
   const blueprint = s.getBlueprint();
   const alt = blueprint.alternatives.find((a) => a.id === s.decision?.alternativeId);
   return (
     <section className="panel">
       <span className="eyebrow">Supervisor workspace</span>
       <h2>Review the reasoning journey</h2>
+      <p className="notice">
+        Supervisor feedback is optional commentary. Journey completion is controlled from the Review
+        stage and cannot bypass structural journey requirements.
+      </p>
       <div className="summary-grid">
         <article>
           <h3>Initial idea</h3>
@@ -44,16 +47,12 @@ export default function SupervisorPage() {
         />
       </label>
       <div className="actions">
-        <button
-          className="button primary"
-          disabled={s.supervisorFeedback.trim().length < 20}
-          onClick={() => {
-            s.complete();
-            nav("/record");
-          }}
-        >
-          Approve prototype decision record
-        </button>
+        <Link className="button" to="/journey/REVIEW">
+          Open journey review
+        </Link>
+        <Link className="button primary" to="/record">
+          Open Decision Record
+        </Link>
       </div>
     </section>
   );

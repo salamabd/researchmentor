@@ -189,6 +189,39 @@ textarea {
   font-size: 0.9rem;
   line-height: 1.5;
 }
+.journey-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0.5rem 0 1rem;
+}
+.journey-header {
+  margin-bottom: 1.25rem;
+}
+.journey-objectives {
+  margin: 1rem 0 1.5rem;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid #6366f1;
+  background: #f8fafc;
+}
+.journey-objectives ul {
+  margin: 0.75rem 0;
+  padding-left: 1.2rem;
+}
+.journey-stage label {
+  margin-top: 1rem;
+}
+.journey-blocking {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #fca5a5;
+  background: #fef2f2;
+  color: #7f1d1d;
+}
+.journey-review {
+  margin: 1.5rem 0;
+}
 .progress {
   margin-bottom: 2rem;
 }
@@ -209,6 +242,7 @@ textarea {
 }
 .alternative {
   cursor: pointer;
+  display: block;
 }
 .alternative.selected {
   outline: 3px solid #6366f1;
@@ -216,6 +250,23 @@ textarea {
 }
 .alternative input {
   width: auto;
+  margin-right: 0.5rem;
+}
+.alternative-title {
+  display: inline;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.alternative-body {
+  display: block;
+  margin-top: 0.75rem;
+}
+.alternative-description {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.decision-stage-form .alternative {
+  margin: 0;
 }
 .timeline {
   display: grid;

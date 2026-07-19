@@ -25,10 +25,10 @@ export default function IdeaPage() {
       <div className="actions">
         <button
           className="button primary"
-          disabled={idea.trim().length < 20}
-          onClick={() => nav("/guided")}
+          disabled={idea.trim().length === 0}
+          onClick={() => nav("/journey/CONTEXT")}
         >
-          Begin guided thinking
+          Continue to Context stage
         </button>
       </div>
     </section>

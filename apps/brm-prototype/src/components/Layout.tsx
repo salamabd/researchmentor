@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         </div>
         <nav aria-label="Prototype navigation">
           <NavLink to="/welcome">Home</NavLink>
-          <NavLink to="/guided">Journey</NavLink>
+          <NavLink to="/journey">Journey</NavLink>
           <NavLink to="/supervisor">Supervisor</NavLink>
           <NavLink to="/record">Record</NavLink>
         </nav>

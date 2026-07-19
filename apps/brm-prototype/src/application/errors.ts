@@ -24,3 +24,28 @@ export class NoCurrentQuestionError extends Error {
     this.name = "NoCurrentQuestionError";
   }
 }
+
+export class IncompleteResearchJourneyError extends Error {
+  constructor(
+    public readonly missingStageIds: string[],
+    public readonly blockingReasons: string[],
+    public readonly missingRequiredQuestionIds: string[] = [],
+  ) {
+    const stageList =
+      missingStageIds.length > 0 ? missingStageIds.join(", ") : "required journey steps";
+    super(`Research journey is incomplete: ${stageList}`);
+    this.name = "IncompleteResearchJourneyError";
+  }
+}
+
+export class JourneyStageNotAvailableError extends Error {
+  constructor(
+    public readonly stageId: string,
+    public readonly recommendedStageId: string,
+  ) {
+    super(
+      `Journey stage "${stageId}" is not available yet. Continue from "${recommendedStageId}".`,
+    );
+    this.name = "JourneyStageNotAvailableError";
+  }
+}

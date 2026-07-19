@@ -4,16 +4,26 @@ import type {
   BlueprintQuestion,
   Decision,
   DecisionRecord,
+  ResearchJourneyStage,
+  ResearchJourneyStageId,
   ResearchSession,
 } from "../domain/types";
 import type { BlueprintRegistry } from "../blueprints/registry";
 import type { SessionService } from "./sessionService";
 import {
+  IncompleteResearchJourneyError,
   InvalidBlueprintAlternativeError,
+  JourneyStageNotAvailableError,
   NoCurrentQuestionError,
   UnknownBlueprintError,
 } from "./errors";
 import { evaluateSessionDiagnostics, type SessionDiagnosticsReport } from "./sessionDiagnostics";
+import {
+  deriveResearchJourneyProgress,
+  getJourneyStage,
+  isJourneyStageAvailable,
+  type ResearchJourneyProgress,
+} from "./researchJourney";
 
 /**
  * Application coordinator for Blueprint-aware session operations.
@@ -89,6 +99,49 @@ export class BlueprintExecutionService {
     const session = this.sessionService.getSession();
     const blueprint = this.getActiveBlueprint();
     return evaluateSessionDiagnostics(session, blueprint);
+  }
+
+  getResearchJourneyProgress(): ResearchJourneyProgress {
+    const session = this.sessionService.getSession();
+    const blueprint = this.getActiveBlueprint();
+    return deriveResearchJourneyProgress(session, blueprint);
+  }
+
+  getResearchJourneyStage(stageId: ResearchJourneyStageId): ResearchJourneyStage {
+    const blueprint = this.getActiveBlueprint();
+    return getJourneyStage(blueprint, stageId);
+  }
+
+  /**
+   * Ensures a stage may be viewed. Backward and available stages are allowed;
+   * blocked forward stages throw.
+   */
+  assertResearchJourneyStageAvailable(stageId: ResearchJourneyStageId): ResearchJourneyProgress {
+    const progress = this.getResearchJourneyProgress();
+    if (!isJourneyStageAvailable(progress, stageId)) {
+      throw new JourneyStageNotAvailableError(stageId, progress.currentStageId);
+    }
+    return progress;
+  }
+
+  /**
+   * Marks the session completed only when all mandatory journey stages are structurally complete.
+   */
+  completeResearchJourney(): ResearchSession {
+    const session = this.sessionService.getSession();
+    const blueprint = this.getActiveBlueprint();
+    const progress = deriveResearchJourneyProgress(session, blueprint);
+    const incomplete = progress.stageCompletions.filter((completion) => !completion.complete);
+
+    if (incomplete.length > 0) {
+      throw new IncompleteResearchJourneyError(
+        incomplete.map((item) => item.stageId),
+        incomplete.flatMap((item) => item.blockingReasons),
+        incomplete.flatMap((item) => item.missingRequiredQuestionIds),
+      );
+    }
+
+    return this.sessionService.markComplete();
   }
 
   /**
